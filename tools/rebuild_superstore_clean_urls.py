@@ -494,6 +494,86 @@ def build_custom_home_page(all_reviews, all_guides, all_hubs):
         active_dept="home"
     )
 
+def get_review_search_text(r):
+    return (r.get('display_title', '') + ' ' + r.get('title_2026', '') + ' ' + r.get('product_name', '') + ' ' + r.get('brand', '') + ' ' + r.get('archetype', '')).lower()
+
+def filter_reviews_for_hub(hub_path, hub_name, all_reviews):
+    p = hub_path.lower()
+    name = hub_name.lower()
+    combo = f"{p} {name}"
+    
+    # 1. Main mega catalog pages: show all 57 watches without duplication
+    if p in ['/category/watch-deals/', '/category/watches/', '/category/product-reviews/', '/category/shop-online/', '/tag/best-watch-deals-2/', '/watch-brands/']:
+        return all_reviews
+        
+    # 2. Rolex & Homages
+    if 'rolex' in combo:
+        matches = [r for r in all_reviews if r.get('brand') == 'San Martin' or any(k in get_review_search_text(r) for k in ['gmt', 'bb58', 'bb54', 'submariner', 'datejust', 'sn0121'])]
+        return matches[:12]
+        
+    # 3. Seiko NH35 / NH34 Divers & Homages
+    if 'seiko' in combo:
+        matches = [r for r in all_reviews if r.get('brand') in ['STEELDIVE', 'Addiesdive'] or any(k in get_review_search_text(r) for k in ['nh35', 'willard', 'sd1970'])]
+        return matches[:12]
+        
+    # 4. Omega & Speedmaster / Seamaster Homages
+    if 'omega' in combo or 'speedmaster' in combo or 'seamaster' in combo:
+        matches = [r for r in all_reviews if any(k in get_review_search_text(r) for k in ['moon', 'speedmaster', 'seamaster', 'meteorite']) or (r.get('brand') == 'PAGANI DESIGN' and r.get('archetype') in ['chronograph', 'diver'])]
+        return matches[:12]
+        
+    # 5. Breitling & Aviation Pilot Watches
+    if 'breitling' in combo or 'pilot' in combo or 'aviation' in combo:
+        matches = [r for r in all_reviews if r.get('archetype') == 'pilot' or any(k in get_review_search_text(r) for k in ['pilot', 'army', '1963', 'flieger', 'cockpit']) or r.get('brand') in ['Tandorio', 'Sugess']]
+        return matches[:12]
+        
+    # 6. Tag Heuer & Racing Chronographs
+    if 'tag-heuer' in combo or 'racing' in combo or 'motorsport' in combo:
+        matches = [r for r in all_reviews if r.get('archetype') == 'chronograph' or any(k in get_review_search_text(r) for k in ['tachymeter', 'sport', 'racing', 'panda'])]
+        return matches[:12]
+        
+    # 7. Audemars Piguet & Luxury Integrated Sports
+    if 'audemars' in combo or 'piguet' in combo or 'royal-oak' in combo:
+        matches = [r for r in all_reviews if r.get('brand') in ['Specht&Sohne', 'Baltany'] or r.get('archetype') in ['luxury_sport', 'skeleton'] or '5167' in get_review_search_text(r)]
+        return matches[:12]
+        
+    # 8. Movado, Bulova, Dress & Minimalist
+    if 'movado' in combo or 'bulova' in combo or 'dress' in combo:
+        matches = [r for r in all_reviews if r.get('brand') in ['Lobinni', 'Escapement Time', 'BOBO BIRD'] or r.get('archetype') == 'fashion_dress']
+        return matches[:12]
+        
+    # 9. Invicta, Deep Dive & Heavy Tool Watches
+    if 'invicta' in combo or 'russian-diver' in combo:
+        matches = [r for r in all_reviews if r.get('archetype') == 'diver' and any(k in get_review_search_text(r) for k in ['600m', '200m', '20bar', '20atm', 'helium'])]
+        return matches[:12]
+        
+    # 10. Mechanical & Automatic Movements
+    if 'mechanical' in combo or 'automatic' in combo:
+        matches = [r for r in all_reviews if 'quartz' not in get_review_search_text(r) and r.get('archetype') in ['diver', 'pilot', 'skeleton', 'fashion_dress']]
+        return matches[:16]
+        
+    # 11. Novelty, Skeleton & Tourbillon
+    if 'novelty' in combo or 'skeleton' in combo:
+        matches = [r for r in all_reviews if r.get('archetype') in ['skeleton', 'wood_gift'] or any(k in get_review_search_text(r) for k in ['tourbillon', 'hollow', 'wood', 'pearl'])]
+        return matches[:12]
+        
+    # 12. Price categories
+    if 'under-50' in combo:
+        matches = [r for r in all_reviews if float(r.get('sale_price', 100)) < 55.0]
+        return matches[:12]
+        
+    if '100-to-200' in combo:
+        matches = [r for r in all_reviews if 100.0 <= float(r.get('sale_price', 100)) <= 200.0]
+        return matches[:12]
+        
+    if '200-to-500' in combo or '1000-above' in combo:
+        matches = [r for r in all_reviews if float(r.get('sale_price', 100)) >= 200.0]
+        return matches[:12]
+        
+    # Salted rotation for other categories so each category gets a distinct collection
+    salt = sum(ord(c) for c in combo) % len(all_reviews)
+    rotated = all_reviews[salt:] + all_reviews[:salt]
+    return rotated[:12]
+
 def build_custom_hub_page(item, all_reviews, all_guides, all_hubs):
     title = item['title_2026']
     hub_name = item.get('hub_name', 'Watch Deals')
@@ -514,6 +594,10 @@ def build_custom_hub_page(item, all_reviews, all_guides, all_hubs):
         editorial_p = "Seiko revolutionized global watchmaking and remains the undisputed benchmark of accessible mechanical horology. Their TMI NH35 automatic and NH34 GMT movements now power the world's most acclaimed independent microbrands, offering bulletproof reliability."
         deal_query = "seiko+nh35+automatic+diver"
         dept_active = "seiko"
+    elif "breitling" in hub_lower or "pilot" in hub_lower:
+        editorial_p = "Aviation chronographs and pilot instruments feature high-contrast reverse-panda registers, rotating slide-rule bezels, and mechanical column-wheel movements engineered for instantaneous cockpit timing."
+        deal_query = "pilot+chronograph+watch+1963"
+        dept_active = "deals"
     elif "mechanical" in hub_lower:
         editorial_p = "Mechanical and automatic timepieces represent miniature kinetic engineering powered solely by coiled mainsprings, gear trains, and the natural motion of your wrist. Our buying guide compares essential calibres helping you choose the most reliable automatic watch for your budget."
         deal_query = "automatic+mechanical+watch+nh35"
@@ -523,7 +607,8 @@ def build_custom_hub_page(item, all_reviews, all_guides, all_hubs):
         deal_query = f"{hub_name.lower().replace(' ', '+')}+watches"
         dept_active = "deals"
 
-    cards_html = [clean_product_card_html(r) for r in all_reviews[:16]]
+    matched_reviews = filter_reviews_for_hub(path, hub_name, all_reviews)
+    cards_html = [clean_product_card_html(r) for r in matched_reviews]
 
     body = f"""
     <!-- Category Hero Header -->
@@ -541,7 +626,7 @@ def build_custom_hub_page(item, all_reviews, all_guides, all_hubs):
     <!-- Products Grid -->
     <div class="section-header">
         <div class="section-title">
-            <span>⌚</span> Featured {html.escape(hub_name)} Timepieces
+            <span>⌚</span> Featured {html.escape(hub_name)} Timepieces ({len(matched_reviews)} Deals)
         </div>
     </div>
     <div class="products-grid">
