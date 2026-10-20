@@ -13,8 +13,9 @@ import xml.etree.ElementTree as ET
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
-MANIFEST_PATH = 'bestwatchdeals_manifest_v2.json'
-DIST_DIR = 'dist_bestwatchdeals'
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+MANIFEST_PATH = os.path.join(SCRIPT_DIR, 'bestwatchdeals_manifest_v2.json')
+DIST_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, '..'))
 
 def generate_pinterest_rss():
     with open(MANIFEST_PATH, 'r', encoding='utf-8') as f:
@@ -51,8 +52,8 @@ def generate_pinterest_rss():
     base_time = now - datetime.timedelta(days=7)
     
     for i, r in enumerate(reviews):
-        title = r.get('product_name') or r['title_2026'].split(':')[0]
-        url = r['url']
+        title = r.get('display_title') or r.get('product_name') or r['title_2026'].split(':')[0]
+        url = r.get('clean_url') or r['url']
         brand = r.get('brand', 'Horology')
         # Use the generated high-impact comparison Pin graphic!
         img_url = f"https://bestwatchdeals.com/assets/pins/pin_{i+1}.jpg"
