@@ -479,6 +479,9 @@ def render_layout(title, description, canonical_url, body_html, schema_ld="", og
     <meta name="twitter:description" content="{html.escape(description)}">
     <meta name="twitter:image" content="{og_image}">
     
+    <!-- Pinterest Domain Verification -->
+    <meta name="p:domain_verify" content="6db1a8dc4aaa13ca21418f68919f5508" />
+    
     <!-- Ultra-lightweight Zero-JS Production CSS (<8KB) -->
     <style>{BASE_CSS}</style>
     {schema_ld}

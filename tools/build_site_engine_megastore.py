@@ -891,6 +891,9 @@ def render_megastore_layout(title, description, canonical_url, body_html, schema
     <link rel="alternate" type="application/rss+xml" title="BestWatchDeals RSS Feed" href="https://bestwatchdeals.com/feed.xml">
     <link rel="alternate" type="application/rss+xml" title="BestWatchDeals Pinterest Auto-Publish Feed" href="https://bestwatchdeals.com/pinterest-feed.xml">
     
+    <!-- Pinterest Domain Verification -->
+    <meta name="p:domain_verify" content="6db1a8dc4aaa13ca21418f68919f5508" />
+    
     <!-- Lightweight Zero-JS Megastore Production CSS -->
     <style>{MEGASTORE_CSS}</style>
     {schema_ld}
