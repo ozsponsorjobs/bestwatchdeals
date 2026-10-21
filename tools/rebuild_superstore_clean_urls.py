@@ -778,6 +778,10 @@ def main():
         f.write("\n".join(sitemap_xml) + "\n")
     print(f"✅ Generated sitemap.xml with {len(sitemap_entries)} clean URLs.")
 
+    # 9. Generate llms.txt, llms-full.txt, and AI-optimized robots.txt
+    from generate_llms_txt import generate_llms_files
+    generate_llms_files()
+
     print("🎉 Full Megastore Rebuild Succeeded!")
 
 if __name__ == '__main__':

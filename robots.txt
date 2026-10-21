@@ -1,4 +1,37 @@
 User-agent: *
 Allow: /
 
+# Explicit permissions for AI Search Engines & LLM Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# LLM Machine-Readable Context Files
+# See https://llmstxt.org/
+# llms.txt: https://bestwatchdeals.com/llms.txt
+# llms-full.txt: https://bestwatchdeals.com/llms-full.txt
+
+# Sitemaps and Feeds
 Sitemap: https://bestwatchdeals.com/sitemap.xml
+Sitemap: https://bestwatchdeals.com/pinterest-feed.xml
+Sitemap: https://bestwatchdeals.com/feed.xml
