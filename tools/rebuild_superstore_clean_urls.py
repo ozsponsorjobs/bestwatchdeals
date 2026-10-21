@@ -755,8 +755,11 @@ def main():
 
     # 7. Write Cloudflare _redirects
     print("🔄 Generating Cloudflare _redirects...")
+    PROTECTED_STATIC_PATHS = ['/robots.txt', '/robots.txt/', '/sitemap.xml', '/sitemap.xml/', '/llms.txt', '/llms.txt/', '/llms-full.txt', '/llms-full.txt/', '/feed.xml', '/pinterest-feed.xml', '/rss.xml']
     for r in redirs:
         p_from = r['path']
+        if p_from in PROTECTED_STATIC_PATHS or p_from.rstrip('/') in [p.rstrip('/') for p in PROTECTED_STATIC_PATHS]:
+            continue
         p_to = r.get('redirect_to', '/category/watch-deals/')
         redirect_lines.append(f"{p_from} {p_to} 301")
         if p_from.endswith('/'):
