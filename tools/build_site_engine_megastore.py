@@ -941,6 +941,7 @@ def render_megastore_layout(title, description, canonical_url, body_html, schema
             <div class="departments-inner">
                 <a href="/" class="dept-link {'active' if active_dept=='home' else ''}">🏠 Home</a>
                 <a href="/category/watch-deals/" class="dept-link {'active' if active_dept=='deals' else ''}">🏷️ All Watch Deals <span class="badge-tag">HOT</span></a>
+                <a href="/articles/top-5-best-rolex-submariner-alternatives/" class="dept-link {'active' if active_dept=='alternatives' else ''}">🏆 Top 5 Alternatives <span class="badge-tag" style="background:#ea580c; color:#ffffff;">NEW</span></a>
                 <a href="/tag/rolex/" class="dept-link {'active' if active_dept=='rolex' else ''}">👑 Rolex &amp; Homages</a>
                 <a href="/tag/seiko/" class="dept-link {'active' if active_dept=='seiko' else ''}">🌊 Seiko NH35 Divers</a>
                 <a href="/tag/mechanical-watches/" class="dept-link {'active' if active_dept=='mechanical' else ''}">⚙️ Automatic Calibres</a>

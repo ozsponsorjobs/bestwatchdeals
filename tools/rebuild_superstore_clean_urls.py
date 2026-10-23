@@ -26,6 +26,7 @@ from build_site_engine_megastore import (
     DEFAULT_OG_IMAGE
 )
 from build_site_engine_v3 import build_guide_page, build_legal_page, build_404_page, create_headers_file, create_og_svg
+from build_roundup_articles import build_all_roundup_articles, ROUNDUP_ARTICLES
 
 MANIFEST_PATH = os.path.join(TOOLS_DIR, 'bestwatchdeals_manifest_v2.json')
 
@@ -463,6 +464,120 @@ def build_custom_home_page(all_reviews, all_guides, all_hubs):
         {"".join(deal_cards)}
     </div>
 
+    <!-- Top 5 Alternatives Comparison Guides Showcase -->
+    <div class="section-header" style="margin-top:2.75rem;">
+        <div class="section-title">
+            <span>🏆</span> Top 5 Alternative Watch Guides (2026 In-Depth Rankings)
+        </div>
+        <span style="font-size:0.8rem; font-weight:800; color:#ea580c; text-transform:uppercase;">INDEPENDENTLY TESTED</span>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.25rem; margin-bottom:2.5rem;">
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+            <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+                    <span style="font-size:0.7rem; font-weight:800; background:#fef9c3; color:#854d0e; padding:0.2rem 0.5rem; border-radius:4px; text-transform:uppercase;">👑 Rolex Diver Alternative</span>
+                    <span style="font-size:0.75rem; font-weight:700; color:#059669;">5 Ranked</span>
+                </div>
+                <h4 style="font-size:1.1rem; font-weight:900; color:#0f172a; margin-bottom:0.5rem; line-height:1.35;">
+                    <a href="/articles/top-5-best-rolex-submariner-alternatives/">Top 5 Best Alternatives to the Rolex Submariner (Under $250)</a>
+                </h4>
+                <p style="font-size:0.82rem; color:#475569; line-height:1.6; margin-bottom:1rem;">
+                    Evaluates San Martin, Addiesdive, Pagani Design &amp; Steeldive featuring Seiko NH35 automatics, ceramic bezels, and sapphire crystals.
+                </p>
+                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:0.6rem 0.75rem; font-size:0.78rem; margin-bottom:1rem;">
+                    <span style="color:#854d0e; font-weight:800;">🥇 #1 Pick:</span> <strong>San Martin 40mm BB58 Diver ($214.17)</strong>
+                </div>
+            </div>
+            <a href="/articles/top-5-best-rolex-submariner-alternatives/" style="font-size:0.85rem; font-weight:800; color:#ea580c; text-decoration:none; display:inline-flex; align-items:center; gap:0.25rem;">
+                Read Ranked Comparison &rarr;
+            </a>
+        </div>
+
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+            <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+                    <span style="font-size:0.7rem; font-weight:800; background:#fef9c3; color:#854d0e; padding:0.2rem 0.5rem; border-radius:4px; text-transform:uppercase;">⏱️ Omega Chrono Alternative</span>
+                    <span style="font-size:0.75rem; font-weight:700; color:#059669;">5 Ranked</span>
+                </div>
+                <h4 style="font-size:1.1rem; font-weight:900; color:#0f172a; margin-bottom:0.5rem; line-height:1.35;">
+                    <a href="/articles/top-5-affordable-omega-speedmaster-alternatives/">Top 5 Affordable Alternatives to the Omega Speedmaster Moonwatch</a>
+                </h4>
+                <p style="font-size:0.82rem; color:#475569; line-height:1.6; margin-bottom:1rem;">
+                    Mechanical column-wheel Seagull ST19 and Seiko VK63 meca-quartz chronographs benchmarked for lunar tachymeter heritage.
+                </p>
+                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:0.6rem 0.75rem; font-size:0.78rem; margin-bottom:1rem;">
+                    <span style="color:#854d0e; font-weight:800;">🥇 #1 Pick:</span> <strong>Pagani Design PD-1701 V5 ($90.56)</strong>
+                </div>
+            </div>
+            <a href="/articles/top-5-affordable-omega-speedmaster-alternatives/" style="font-size:0.85rem; font-weight:800; color:#ea580c; text-decoration:none; display:inline-flex; align-items:center; gap:0.25rem;">
+                Read Ranked Comparison &rarr;
+            </a>
+        </div>
+
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+            <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+                    <span style="font-size:0.7rem; font-weight:800; background:#fef9c3; color:#854d0e; padding:0.2rem 0.5rem; border-radius:4px; text-transform:uppercase;">✈️ Dual-Time Travel Alternative</span>
+                    <span style="font-size:0.75rem; font-weight:700; color:#059669;">5 Ranked</span>
+                </div>
+                <h4 style="font-size:1.1rem; font-weight:900; color:#0f172a; margin-bottom:0.5rem; line-height:1.35;">
+                    <a href="/articles/top-5-best-rolex-gmt-master-ii-alternatives/">Top 5 Best Alternatives to the Rolex GMT-Master II (Under $300)</a>
+                </h4>
+                <p style="font-size:0.82rem; color:#475569; line-height:1.6; margin-bottom:1rem;">
+                    Dual-time zone automatic GMT watches featuring ceramic Pepsi and Batman bezels, Grade 5 titanium, and Jubilee bracelets.
+                </p>
+                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:0.6rem 0.75rem; font-size:0.78rem; margin-bottom:1rem;">
+                    <span style="color:#854d0e; font-weight:800;">🥇 #1 Pick:</span> <strong>Pagani Design 1662 GMT ($102.53)</strong>
+                </div>
+            </div>
+            <a href="/articles/top-5-best-rolex-gmt-master-ii-alternatives/" style="font-size:0.85rem; font-weight:800; color:#ea580c; text-decoration:none; display:inline-flex; align-items:center; gap:0.25rem;">
+                Read Ranked Comparison &rarr;
+            </a>
+        </div>
+
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+            <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+                    <span style="font-size:0.7rem; font-weight:800; background:#fef9c3; color:#854d0e; padding:0.2rem 0.5rem; border-radius:4px; text-transform:uppercase;">💎 Luxury Sports Alternative</span>
+                    <span style="font-size:0.75rem; font-weight:700; color:#059669;">5 Ranked</span>
+                </div>
+                <h4 style="font-size:1.1rem; font-weight:900; color:#0f172a; margin-bottom:0.5rem; line-height:1.35;">
+                    <a href="/articles/top-5-luxury-integrated-bracelet-sports-watch-alternatives/">Top 5 Integrated-Bracelet Sports Watch Alternatives (PRX &amp; Royal Oak)</a>
+                </h4>
+                <p style="font-size:0.82rem; color:#475569; line-height:1.6; margin-bottom:1rem;">
+                    Geometric bezels, tapisserie waffle dials, and seamless integrated bracelets benchmarked against Tissot PRX and AP Royal Oak.
+                </p>
+                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:0.6rem 0.75rem; font-size:0.78rem; margin-bottom:1rem;">
+                    <span style="color:#854d0e; font-weight:800;">🥇 #1 Pick:</span> <strong>Specht &amp; Sohne PRX Automatic ($85.99)</strong>
+                </div>
+            </div>
+            <a href="/articles/top-5-luxury-integrated-bracelet-sports-watch-alternatives/" style="font-size:0.85rem; font-weight:800; color:#ea580c; text-decoration:none; display:inline-flex; align-items:center; gap:0.25rem;">
+                Read Ranked Comparison &rarr;
+            </a>
+        </div>
+
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+            <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+                    <span style="font-size:0.7rem; font-weight:800; background:#fef9c3; color:#854d0e; padding:0.2rem 0.5rem; border-radius:4px; text-transform:uppercase;">🌊 Seiko Cushion Alternative</span>
+                    <span style="font-size:0.75rem; font-weight:700; color:#059669;">5 Ranked</span>
+                </div>
+                <h4 style="font-size:1.1rem; font-weight:900; color:#0f172a; margin-bottom:0.5rem; line-height:1.35;">
+                    <a href="/articles/top-5-seiko-captain-willard-turtle-alternatives/">Top 5 Seiko Captain Willard &amp; Turtle Cushion Diver Alternatives</a>
+                </h4>
+                <p style="font-size:0.82rem; color:#475569; line-height:1.6; margin-bottom:1rem;">
+                    Historic 1970s asymmetric cushion dive cases, protected 4 o'clock crowns, and explosive BGW9 Super-LumiNova under $130.
+                </p>
+                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:0.6rem 0.75rem; font-size:0.78rem; margin-bottom:1rem;">
+                    <span style="color:#854d0e; font-weight:800;">🥇 #1 Pick:</span> <strong>Steeldive SD1970 Willard Automatic ($127.36)</strong>
+                </div>
+            </div>
+            <a href="/articles/top-5-seiko-captain-willard-turtle-alternatives/" style="font-size:0.85rem; font-weight:800; color:#ea580c; text-decoration:none; display:inline-flex; align-items:center; gap:0.25rem;">
+                Read Ranked Comparison &rarr;
+            </a>
+        </div>
+    </div>
+
     <!-- More Timepieces -->
     <div class="section-header">
         <div class="section-title">
@@ -708,6 +823,12 @@ def main():
 
     print(f"✅ Compiled all 57 reviews into /watches/<slug>/index.html and .html")
 
+    # 1.5. Compile Top 5 Alternative Watch Roundup Articles
+    print("🏆 Compiling Top 5 Alternative Watch Roundup Articles...")
+    roundup_items = build_all_roundup_articles()
+    for item in roundup_items:
+        sitemap_entries.append(item['url'])
+
     # 2. Compile Guides
     print("📚 Compiling Educational Guides...")
     for g in guides:
@@ -755,7 +876,16 @@ def main():
 
     # 7. Write Cloudflare _redirects
     print("🔄 Generating Cloudflare _redirects...")
-    PROTECTED_STATIC_PATHS = ['/robots.txt', '/robots.txt/', '/sitemap.xml', '/sitemap.xml/', '/llms.txt', '/llms.txt/', '/llms-full.txt', '/llms-full.txt/', '/feed.xml', '/pinterest-feed.xml', '/rss.xml']
+    PROTECTED_STATIC_PATHS = [
+        '/robots.txt', '/robots.txt/', '/sitemap.xml', '/sitemap.xml/',
+        '/llms.txt', '/llms.txt/', '/llms-full.txt', '/llms-full.txt/',
+        '/feed.xml', '/pinterest-feed.xml', '/rss.xml',
+        '/articles/top-5-best-rolex-submariner-alternatives/', '/articles/top-5-best-rolex-submariner-alternatives',
+        '/articles/top-5-affordable-omega-speedmaster-alternatives/', '/articles/top-5-affordable-omega-speedmaster-alternatives',
+        '/articles/top-5-best-rolex-gmt-master-ii-alternatives/', '/articles/top-5-best-rolex-gmt-master-ii-alternatives',
+        '/articles/top-5-luxury-integrated-bracelet-sports-watch-alternatives/', '/articles/top-5-luxury-integrated-bracelet-sports-watch-alternatives',
+        '/articles/top-5-seiko-captain-willard-turtle-alternatives/', '/articles/top-5-seiko-captain-willard-turtle-alternatives'
+    ]
     for r in redirs:
         p_from = r['path']
         if p_from in PROTECTED_STATIC_PATHS or p_from.rstrip('/') in [p.rstrip('/') for p in PROTECTED_STATIC_PATHS]:

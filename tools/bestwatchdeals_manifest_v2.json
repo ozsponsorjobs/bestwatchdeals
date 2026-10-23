@@ -1,6 +1,6 @@
 {
   "domain": "bestwatchdeals.com",
-  "total_urls": 207,
+  "total_urls": 212,
   "urls": [
     {
       "url": "https://bestwatchdeals.com/articles/fundamental-maintenance-and-care-of-rolex-watch/",
@@ -2867,6 +2867,66 @@
       "action": "REDIRECT",
       "redirect_to": "/category/watch-deals/",
       "type": "redirect"
+    },
+    {
+      "url": "https://bestwatchdeals.com/articles/top-5-best-rolex-submariner-alternatives/",
+      "path": "/articles/top-5-best-rolex-submariner-alternatives/",
+      "clean_url": "https://bestwatchdeals.com/articles/top-5-best-rolex-submariner-alternatives/",
+      "clean_path": "/articles/top-5-best-rolex-submariner-alternatives/",
+      "section": "Alternative Watch Roundups",
+      "archived_year": "2026",
+      "action": "ROUNDUP",
+      "title_2026": "Top 5 Best Alternatives to the Rolex Submariner (Under $250)",
+      "topic": "rolex_submariner_alternatives",
+      "type": "roundup"
+    },
+    {
+      "url": "https://bestwatchdeals.com/articles/top-5-affordable-omega-speedmaster-alternatives/",
+      "path": "/articles/top-5-affordable-omega-speedmaster-alternatives/",
+      "clean_url": "https://bestwatchdeals.com/articles/top-5-affordable-omega-speedmaster-alternatives/",
+      "clean_path": "/articles/top-5-affordable-omega-speedmaster-alternatives/",
+      "section": "Alternative Watch Roundups",
+      "archived_year": "2026",
+      "action": "ROUNDUP",
+      "title_2026": "Top 5 Affordable Alternatives to the Omega Speedmaster Moonwatch",
+      "topic": "omega_speedmaster_alternatives",
+      "type": "roundup"
+    },
+    {
+      "url": "https://bestwatchdeals.com/articles/top-5-best-rolex-gmt-master-ii-alternatives/",
+      "path": "/articles/top-5-best-rolex-gmt-master-ii-alternatives/",
+      "clean_url": "https://bestwatchdeals.com/articles/top-5-best-rolex-gmt-master-ii-alternatives/",
+      "clean_path": "/articles/top-5-best-rolex-gmt-master-ii-alternatives/",
+      "section": "Alternative Watch Roundups",
+      "archived_year": "2026",
+      "action": "ROUNDUP",
+      "title_2026": "Top 5 Best Alternatives to the Rolex GMT-Master II (Pepsi & Batman Under $300)",
+      "topic": "rolex_gmt_master_ii_alternatives",
+      "type": "roundup"
+    },
+    {
+      "url": "https://bestwatchdeals.com/articles/top-5-luxury-integrated-bracelet-sports-watch-alternatives/",
+      "path": "/articles/top-5-luxury-integrated-bracelet-sports-watch-alternatives/",
+      "clean_url": "https://bestwatchdeals.com/articles/top-5-luxury-integrated-bracelet-sports-watch-alternatives/",
+      "clean_path": "/articles/top-5-luxury-integrated-bracelet-sports-watch-alternatives/",
+      "section": "Alternative Watch Roundups",
+      "archived_year": "2026",
+      "action": "ROUNDUP",
+      "title_2026": "Top 5 Luxury Integrated-Bracelet Sports Watch Alternatives (PRX & Royal Oak Style)",
+      "topic": "integrated_sports_alternatives",
+      "type": "roundup"
+    },
+    {
+      "url": "https://bestwatchdeals.com/articles/top-5-seiko-captain-willard-turtle-alternatives/",
+      "path": "/articles/top-5-seiko-captain-willard-turtle-alternatives/",
+      "clean_url": "https://bestwatchdeals.com/articles/top-5-seiko-captain-willard-turtle-alternatives/",
+      "clean_path": "/articles/top-5-seiko-captain-willard-turtle-alternatives/",
+      "section": "Alternative Watch Roundups",
+      "archived_year": "2026",
+      "action": "ROUNDUP",
+      "title_2026": "Top 5 Seiko Captain Willard & Turtle Alternatives (Affordable Cushion Divers)",
+      "topic": "seiko_willard_turtle_alternatives",
+      "type": "roundup"
     }
   ]
 }

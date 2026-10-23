@@ -23,6 +23,7 @@ def generate_pinterest_rss():
         
     reviews = [u for u in manifest['urls'] if u.get('action') == 'REVIEW']
     guides = [u for u in manifest['urls'] if u.get('action') == 'GUIDE']
+    roundups = [u for u in manifest['urls'] if u.get('action') == 'ROUNDUP']
     
     now = datetime.datetime.now(datetime.timezone.utc)
     
@@ -89,6 +90,45 @@ def generate_pinterest_rss():
             f'      <guid isPermaLink="true">{url}</guid>',
             f'      <pubDate>{pub_date}</pubDate>',
             f'      <dc:creator><![CDATA[BestWatchDeals Editorial Board]]></dc:creator>',
+            f'      <description><![CDATA[{clean_desc}]]></description>',
+            f'      <content:encoded>{cdata_content}</content:encoded>',
+            f'      <enclosure url="{img_url}" length="0" type="image/jpeg" />',
+            f'      <media:content url="{img_url}" medium="image">',
+            f'        <media:title type="html">{html.escape(title)}</media:title>',
+            '      </media:content>',
+            '    </item>'
+        ])
+        item_count += 1
+        
+    # Process Top 5 Alternative Roundup Guides
+    for k, r_art in enumerate(roundups):
+        title = r_art['title_2026']
+        url = r_art['url']
+        item_time = now - datetime.timedelta(hours=(len(roundups) - k) * 4)
+        pub_date = item_time.strftime("%a, %d %b %Y %H:%M:%S +0000")
+        img_url = f"https://bestwatchdeals.com/assets/pins/pin_{(k*10 + 1)}.jpg"
+        
+        clean_desc = (
+            f"Top 5 Ranked Alternatives: {title}. Comprehensive hands-on horology benchmarks comparing exact movements, "
+            f"synthetic sapphire crystals, ceramic bezels, verified buyer star ratings, order volume, and direct flash sale prices."
+        )
+        
+        cdata_content = f"""<![CDATA[
+<p><img src="{img_url}" alt="{html.escape(title)}" /></p>
+<h2>{html.escape(title)}</h2>
+<p>{clean_desc}</p>
+<p>• <strong>5 Timepieces Tested &amp; Ranked Side-by-Side</strong></p>
+<p>• <strong>Full Specifications, Verified Buyer Reviews &amp; Live Deals</strong></p>
+<p><a href="{url}">Read the full ranked comparison guide at BestWatchDeals &rarr;</a></p>
+]]>"""
+
+        xml_lines.extend([
+            '    <item>',
+            f'      <title>{html.escape(title)} - Ranked Comparison &amp; Buyer Guide</title>',
+            f'      <link>{url}</link>',
+            f'      <guid isPermaLink="true">{url}</guid>',
+            f'      <pubDate>{pub_date}</pubDate>',
+            f'      <dc:creator><![CDATA[Horology Editorial Board]]></dc:creator>',
             f'      <description><![CDATA[{clean_desc}]]></description>',
             f'      <content:encoded>{cdata_content}</content:encoded>',
             f'      <enclosure url="{img_url}" length="0" type="image/jpeg" />',
