@@ -98,10 +98,10 @@ def clean_product_card_html(item):
 
         <div class="card-buttons-row">
             <a href="{promo_link}" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="{path}" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -436,6 +436,108 @@ def build_custom_home_page(all_reviews, all_guides, all_hubs):
     title = "Best Watch Deals Superstore (2026): Luxury Timepieces & Verified Homages"
     description = "The premier online watch superstore. Discover 150+ verified mechanical automatic watches, Seiko NH35 divers, and luxury homage deals direct from manufacturers."
 
+    reviews_by_path = {r.get('clean_path'): r for r in all_reviews if r.get('clean_path')}
+    
+    # 5 Flagship Top Alternatives Data with direct promo links & pricing
+    top5_showcase = [
+        {
+            "badge": "👑 Rolex Submariner Alternative",
+            "title": "Top 5 Best Alternatives to the Rolex Submariner (Under $250)",
+            "article_url": "/articles/top-5-best-rolex-submariner-alternatives/",
+            "desc": "Evaluates San Martin, Addiesdive, Pagani Design & Steeldive featuring Seiko NH35 automatics, ceramic bezels, and synthetic sapphire crystals.",
+            "pick_name": "San Martin 40mm BB58 Diver (NH35A)",
+            "pick_price": "$214.17",
+            "msrp": "$420.00",
+            "path": "/watches/san-martin-40mm-bb58-retro-luxury-diver/",
+            "save": "SAVE 49%"
+        },
+        {
+            "badge": "⏱️ Omega Speedmaster Alternative",
+            "title": "Top 5 Affordable Alternatives to the Omega Speedmaster Moonwatch",
+            "article_url": "/articles/top-5-affordable-omega-speedmaster-alternatives/",
+            "desc": "Mechanical column-wheel Seagull ST19 and Seiko VK63 meca-quartz chronographs benchmarked for lunar tachymeter heritage.",
+            "pick_name": "Pagani Design PD-1701 V5 Moonwatch (VK63)",
+            "pick_price": "$90.56",
+            "msrp": "$290.00",
+            "path": "/watches/pagani-design-v5-moon-men-s-top/",
+            "save": "SAVE 69%"
+        },
+        {
+            "badge": "✈️ Rolex GMT-Master II Alternative",
+            "title": "Top 5 Best Alternatives to the Rolex GMT-Master II (Under $300)",
+            "article_url": "/articles/top-5-best-rolex-gmt-master-ii-alternatives/",
+            "desc": "Dual-time zone automatic GMT watches featuring ceramic Pepsi and Batman bezels, Grade 5 titanium, and Jubilee bracelets.",
+            "pick_name": "Pagani Design 1662 Automatic GMT (Pepsi/Batman)",
+            "pick_price": "$102.53",
+            "msrp": "$340.00",
+            "path": "/watches/pagani-design-1662-pagani-design-gmt-auto/",
+            "save": "SAVE 70%"
+        },
+        {
+            "badge": "💎 Luxury Integrated-Bracelet (PRX & AP)",
+            "title": "Top 5 Integrated-Bracelet Sports Watch Alternatives (PRX & Royal Oak)",
+            "article_url": "/articles/top-5-luxury-integrated-bracelet-sports-watch-alternatives/",
+            "desc": "Geometric bezels, tapisserie waffle dials, and seamless integrated bracelets benchmarked against Tissot PRX and AP Royal Oak.",
+            "pick_name": "Specht & Sohne PRX Automatic (Waffle Dial)",
+            "pick_price": "$85.99",
+            "msrp": "$280.00",
+            "path": "/watches/specht-sohne-dropping-shipping-specht-sohne-polo/",
+            "save": "SAVE 69%"
+        },
+        {
+            "badge": "🌊 Seiko Captain Willard & Turtle Diver",
+            "title": "Top 5 Seiko Captain Willard & Turtle Cushion Diver Alternatives",
+            "article_url": "/articles/top-5-seiko-captain-willard-turtle-alternatives/",
+            "desc": "Historic 1970s asymmetric cushion dive cases, protected 4 o'clock crowns, and explosive BGW9 Super-LumiNova under $130.",
+            "pick_name": "Steeldive SD1970 Willard 200M Diver (NH35A)",
+            "pick_price": "$127.36",
+            "msrp": "$360.00",
+            "path": "/watches/steeldive-sd1970-auto-diver-captain-willard/",
+            "save": "SAVE 65%"
+        }
+    ]
+
+    alternatives_cards_html = []
+    for item in top5_showcase:
+        r = reviews_by_path.get(item["path"])
+        promo_link = (r.get("promotion_link") if r else None) or "https://s.click.aliexpress.com/e/_c45LWcBP"
+        
+        card_html = f"""
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:14px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 3px 12px rgba(0,0,0,0.04); transition:transform 0.2s, box-shadow 0.2s;">
+            <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.85rem;">
+                    <span style="font-size:0.72rem; font-weight:800; background:#fef3c7; color:#92400e; padding:0.25rem 0.6rem; border-radius:6px; text-transform:uppercase; letter-spacing:0.04em;">{item['badge']}</span>
+                    <span style="font-size:0.72rem; font-weight:800; background:#ecfdf5; color:#065f46; padding:0.2rem 0.5rem; border-radius:4px;">5 RANKED</span>
+                </div>
+                <h3 style="font-size:1.15rem; font-weight:900; color:#0f172a; margin-bottom:0.6rem; line-height:1.35;">
+                    <a href="{item['article_url']}" style="color:#0f172a; text-decoration:none;">{item['title']}</a>
+                </h3>
+                <p style="font-size:0.84rem; color:#475569; line-height:1.55; margin-bottom:1.15rem;">
+                    {item['desc']}
+                </p>
+                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:0.85rem 1rem; margin-bottom:1.25rem;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.35rem;">
+                        <span style="color:#854d0e; font-weight:800; font-size:0.78rem;">🥇 #1 VERIFIED PICK</span>
+                        <span style="background:#fee2e2; color:#991b1b; font-size:0.7rem; font-weight:800; padding:0.15rem 0.4rem; border-radius:4px;">{item['save']}</span>
+                    </div>
+                    <div style="font-size:0.92rem; font-weight:800; color:#0f172a; margin-bottom:0.25rem;">{item['pick_name']}</div>
+                    <div style="font-size:0.82rem; color:#64748b;">
+                        Factory Deal: <strong style="color:#059669; font-size:1rem;">{item['pick_price']}</strong> <span style="text-decoration:line-through; font-size:0.75rem;">{item['msrp']}</span>
+                    </div>
+                </div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                <a href="{promo_link}" target="_blank" rel="nofollow sponsored" class="btn-buy-deal" style="background:linear-gradient(135deg, #f97316 0%, #ea580c 100%); color:#ffffff; font-size:0.88rem; font-weight:800; padding:0.75rem 1rem; border-radius:8px; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:0.4rem; box-shadow:0 3px 8px rgba(234, 88, 12, 0.28);">
+                    ⚡ Check Deal on AliExpress ({item['pick_price']}) 🛒
+                </a>
+                <a href="{item['article_url']}" style="background:#ffffff; color:#334155; border:1px solid #cbd5e1; font-size:0.82rem; font-weight:700; padding:0.6rem 0.85rem; border-radius:8px; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:0.35rem;">
+                    📖 Read Full 5-Watch Comparison &rarr;
+                </a>
+            </div>
+        </div>
+        """
+        alternatives_cards_html.append(card_html)
+
     deal_cards = [clean_product_card_html(r) for r in all_reviews[:12]]
     more_cards = [clean_product_card_html(r) for r in all_reviews[12:28]]
 
@@ -453,8 +555,66 @@ def build_custom_home_page(all_reviews, all_guides, all_hubs):
     """ for g in all_guides[:6]])
 
     body = f"""
+    <!-- High-Converting Hero Banner -->
+    <section class="hero-conversion-banner" style="background:linear-gradient(135deg, #090d16 0%, #0f172a 60%, #1e293b 100%); border:1px solid rgba(245, 158, 11, 0.3); border-radius:16px; padding:2.5rem 2rem; margin-bottom:2.25rem; color:#ffffff; box-shadow:0 10px 30px rgba(0,0,0,0.12); position:relative; overflow:hidden;">
+        <div style="position:absolute; top:-60px; right:-60px; width:220px; height:220px; background:radial-gradient(circle, rgba(234, 88, 12, 0.15) 0%, transparent 70%); border-radius:50%; pointer-events:none;"></div>
+        <div style="max-width:850px; position:relative; z-index:2;">
+            <div style="display:inline-flex; align-items:center; gap:0.5rem; background:rgba(245, 158, 11, 0.15); border:1px solid rgba(245, 158, 11, 0.4); color:#fbbf24; font-size:0.75rem; font-weight:800; padding:0.35rem 0.85rem; border-radius:999px; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:1.15rem;">
+                <span>⚡</span> 2026 Official Buying Guide &amp; Factory-Direct Watch Deals
+            </div>
+            <h1 style="font-size:clamp(1.75rem, 4vw, 2.5rem); font-weight:900; line-height:1.2; letter-spacing:-0.03em; margin-bottom:1rem; color:#ffffff;">
+                Luxury Timepiece Craftsmanship <span style="background:linear-gradient(135deg, #f59e0b 0%, #ea580c 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Without the 10,000% Markup</span>
+            </h1>
+            <p style="font-size:1.02rem; color:#cbd5e1; line-height:1.65; margin-bottom:1.75rem; max-width:760px;">
+                Skip multi-year waiting lists and five-figure boutique price tags. We independently teardown, test, and rank precision automatic watches featuring genuine sapphire crystals, ceramic bezels, and Japanese Seiko NH35 / Seagull calibres straight from factory watchmakers.
+            </p>
+            
+            <div style="display:flex; flex-wrap:wrap; gap:0.85rem; align-items:center; margin-bottom:1.75rem;">
+                <a href="#top-alternatives" style="background:linear-gradient(135deg, #f97316 0%, #ea580c 100%); color:#ffffff; font-size:0.95rem; font-weight:800; padding:0.85rem 1.6rem; border-radius:8px; text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem; box-shadow:0 4px 14px rgba(234, 88, 12, 0.4);">
+                    🏆 Explore Top 5 Luxury Alternatives (Ranked) &darr;
+                </a>
+                <a href="#flash-deals" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.25); color:#ffffff; font-size:0.95rem; font-weight:700; padding:0.85rem 1.4rem; border-radius:8px; text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;">
+                    🔥 Today's Verified Deals (Up to 70% Off) &darr;
+                </a>
+            </div>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:1rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.12); font-size:0.82rem; color:#94a3b8;">
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                    <span style="color:#fbbf24; font-size:1.1rem;">💎</span>
+                    <span><strong style="color:#ffffff;">100% Sapphire</strong> Crystal Verified</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                    <span style="color:#38bdf8; font-size:1.1rem;">⚙️</span>
+                    <span><strong style="color:#ffffff;">Seiko NH34/35</strong> &amp; Seagull Movements</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                    <span style="color:#4ade80; font-size:1.1rem;">🌊</span>
+                    <span><strong style="color:#ffffff;">100M-200M</strong> Water Resistance Tested</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                    <span style="color:#f43f5e; font-size:1.1rem;">🚚</span>
+                    <span><strong style="color:#ffffff;">Tracked Global</strong> Factory Delivery</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top 5 Alternatives Comparison Guides Showcase (PROMINENT AT TOP) -->
+    <div id="top-alternatives" class="section-header" style="margin-top:1rem;">
+        <div class="section-title">
+            <span>🏆</span> Top 5 Alternative Watch Guides (2026 In-Depth Rankings)
+        </div>
+        <span style="font-size:0.8rem; font-weight:800; color:#ea580c; text-transform:uppercase;">INDEPENDENTLY TESTED</span>
+    </div>
+    <p style="font-size:0.9rem; color:#64748b; margin-top:-0.75rem; margin-bottom:1.5rem; line-height:1.5;">
+        Our horology editors benchmarked 25+ iconic homages across bezel action, dial finishing, sapphire clarity, and movement tolerances. Compare top 5 picks or click to claim verified manufacturer deal pricing.
+    </p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:1.25rem; margin-bottom:3rem;">
+        {"".join(alternatives_cards_html)}
+    </div>
+
     <!-- Flash Deals Section -->
-    <div class="section-header">
+    <div id="flash-deals" class="section-header">
         <div class="section-title">
             <span>🔥</span> Today's Top Verified Watch Deals (Direct Manufacturer Stock)
         </div>
@@ -464,122 +624,8 @@ def build_custom_home_page(all_reviews, all_guides, all_hubs):
         {"".join(deal_cards)}
     </div>
 
-    <!-- Top 5 Alternatives Comparison Guides Showcase -->
-    <div class="section-header" style="margin-top:2.75rem;">
-        <div class="section-title">
-            <span>🏆</span> Top 5 Alternative Watch Guides (2026 In-Depth Rankings)
-        </div>
-        <span style="font-size:0.8rem; font-weight:800; color:#ea580c; text-transform:uppercase;">INDEPENDENTLY TESTED</span>
-    </div>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.25rem; margin-bottom:2.5rem;">
-        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
-            <div>
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
-                    <span style="font-size:0.7rem; font-weight:800; background:#fef9c3; color:#854d0e; padding:0.2rem 0.5rem; border-radius:4px; text-transform:uppercase;">👑 Rolex Diver Alternative</span>
-                    <span style="font-size:0.75rem; font-weight:700; color:#059669;">5 Ranked</span>
-                </div>
-                <h4 style="font-size:1.1rem; font-weight:900; color:#0f172a; margin-bottom:0.5rem; line-height:1.35;">
-                    <a href="/articles/top-5-best-rolex-submariner-alternatives/">Top 5 Best Alternatives to the Rolex Submariner (Under $250)</a>
-                </h4>
-                <p style="font-size:0.82rem; color:#475569; line-height:1.6; margin-bottom:1rem;">
-                    Evaluates San Martin, Addiesdive, Pagani Design &amp; Steeldive featuring Seiko NH35 automatics, ceramic bezels, and sapphire crystals.
-                </p>
-                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:0.6rem 0.75rem; font-size:0.78rem; margin-bottom:1rem;">
-                    <span style="color:#854d0e; font-weight:800;">🥇 #1 Pick:</span> <strong>San Martin 40mm BB58 Diver ($214.17)</strong>
-                </div>
-            </div>
-            <a href="/articles/top-5-best-rolex-submariner-alternatives/" style="font-size:0.85rem; font-weight:800; color:#ea580c; text-decoration:none; display:inline-flex; align-items:center; gap:0.25rem;">
-                Read Ranked Comparison &rarr;
-            </a>
-        </div>
-
-        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
-            <div>
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
-                    <span style="font-size:0.7rem; font-weight:800; background:#fef9c3; color:#854d0e; padding:0.2rem 0.5rem; border-radius:4px; text-transform:uppercase;">⏱️ Omega Chrono Alternative</span>
-                    <span style="font-size:0.75rem; font-weight:700; color:#059669;">5 Ranked</span>
-                </div>
-                <h4 style="font-size:1.1rem; font-weight:900; color:#0f172a; margin-bottom:0.5rem; line-height:1.35;">
-                    <a href="/articles/top-5-affordable-omega-speedmaster-alternatives/">Top 5 Affordable Alternatives to the Omega Speedmaster Moonwatch</a>
-                </h4>
-                <p style="font-size:0.82rem; color:#475569; line-height:1.6; margin-bottom:1rem;">
-                    Mechanical column-wheel Seagull ST19 and Seiko VK63 meca-quartz chronographs benchmarked for lunar tachymeter heritage.
-                </p>
-                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:0.6rem 0.75rem; font-size:0.78rem; margin-bottom:1rem;">
-                    <span style="color:#854d0e; font-weight:800;">🥇 #1 Pick:</span> <strong>Pagani Design PD-1701 V5 ($90.56)</strong>
-                </div>
-            </div>
-            <a href="/articles/top-5-affordable-omega-speedmaster-alternatives/" style="font-size:0.85rem; font-weight:800; color:#ea580c; text-decoration:none; display:inline-flex; align-items:center; gap:0.25rem;">
-                Read Ranked Comparison &rarr;
-            </a>
-        </div>
-
-        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
-            <div>
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
-                    <span style="font-size:0.7rem; font-weight:800; background:#fef9c3; color:#854d0e; padding:0.2rem 0.5rem; border-radius:4px; text-transform:uppercase;">✈️ Dual-Time Travel Alternative</span>
-                    <span style="font-size:0.75rem; font-weight:700; color:#059669;">5 Ranked</span>
-                </div>
-                <h4 style="font-size:1.1rem; font-weight:900; color:#0f172a; margin-bottom:0.5rem; line-height:1.35;">
-                    <a href="/articles/top-5-best-rolex-gmt-master-ii-alternatives/">Top 5 Best Alternatives to the Rolex GMT-Master II (Under $300)</a>
-                </h4>
-                <p style="font-size:0.82rem; color:#475569; line-height:1.6; margin-bottom:1rem;">
-                    Dual-time zone automatic GMT watches featuring ceramic Pepsi and Batman bezels, Grade 5 titanium, and Jubilee bracelets.
-                </p>
-                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:0.6rem 0.75rem; font-size:0.78rem; margin-bottom:1rem;">
-                    <span style="color:#854d0e; font-weight:800;">🥇 #1 Pick:</span> <strong>Pagani Design 1662 GMT ($102.53)</strong>
-                </div>
-            </div>
-            <a href="/articles/top-5-best-rolex-gmt-master-ii-alternatives/" style="font-size:0.85rem; font-weight:800; color:#ea580c; text-decoration:none; display:inline-flex; align-items:center; gap:0.25rem;">
-                Read Ranked Comparison &rarr;
-            </a>
-        </div>
-
-        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
-            <div>
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
-                    <span style="font-size:0.7rem; font-weight:800; background:#fef9c3; color:#854d0e; padding:0.2rem 0.5rem; border-radius:4px; text-transform:uppercase;">💎 Luxury Sports Alternative</span>
-                    <span style="font-size:0.75rem; font-weight:700; color:#059669;">5 Ranked</span>
-                </div>
-                <h4 style="font-size:1.1rem; font-weight:900; color:#0f172a; margin-bottom:0.5rem; line-height:1.35;">
-                    <a href="/articles/top-5-luxury-integrated-bracelet-sports-watch-alternatives/">Top 5 Integrated-Bracelet Sports Watch Alternatives (PRX &amp; Royal Oak)</a>
-                </h4>
-                <p style="font-size:0.82rem; color:#475569; line-height:1.6; margin-bottom:1rem;">
-                    Geometric bezels, tapisserie waffle dials, and seamless integrated bracelets benchmarked against Tissot PRX and AP Royal Oak.
-                </p>
-                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:0.6rem 0.75rem; font-size:0.78rem; margin-bottom:1rem;">
-                    <span style="color:#854d0e; font-weight:800;">🥇 #1 Pick:</span> <strong>Specht &amp; Sohne PRX Automatic ($85.99)</strong>
-                </div>
-            </div>
-            <a href="/articles/top-5-luxury-integrated-bracelet-sports-watch-alternatives/" style="font-size:0.85rem; font-weight:800; color:#ea580c; text-decoration:none; display:inline-flex; align-items:center; gap:0.25rem;">
-                Read Ranked Comparison &rarr;
-            </a>
-        </div>
-
-        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
-            <div>
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
-                    <span style="font-size:0.7rem; font-weight:800; background:#fef9c3; color:#854d0e; padding:0.2rem 0.5rem; border-radius:4px; text-transform:uppercase;">🌊 Seiko Cushion Alternative</span>
-                    <span style="font-size:0.75rem; font-weight:700; color:#059669;">5 Ranked</span>
-                </div>
-                <h4 style="font-size:1.1rem; font-weight:900; color:#0f172a; margin-bottom:0.5rem; line-height:1.35;">
-                    <a href="/articles/top-5-seiko-captain-willard-turtle-alternatives/">Top 5 Seiko Captain Willard &amp; Turtle Cushion Diver Alternatives</a>
-                </h4>
-                <p style="font-size:0.82rem; color:#475569; line-height:1.6; margin-bottom:1rem;">
-                    Historic 1970s asymmetric cushion dive cases, protected 4 o'clock crowns, and explosive BGW9 Super-LumiNova under $130.
-                </p>
-                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:0.6rem 0.75rem; font-size:0.78rem; margin-bottom:1rem;">
-                    <span style="color:#854d0e; font-weight:800;">🥇 #1 Pick:</span> <strong>Steeldive SD1970 Willard Automatic ($127.36)</strong>
-                </div>
-            </div>
-            <a href="/articles/top-5-seiko-captain-willard-turtle-alternatives/" style="font-size:0.85rem; font-weight:800; color:#ea580c; text-decoration:none; display:inline-flex; align-items:center; gap:0.25rem;">
-                Read Ranked Comparison &rarr;
-            </a>
-        </div>
-    </div>
-
     <!-- More Timepieces -->
-    <div class="section-header">
+    <div class="section-header" style="margin-top:2rem;">
         <div class="section-title">
             <span>⚡</span> Automatic Calibres, GMTs &amp; Vintage Chronographs
         </div>
@@ -598,6 +644,37 @@ def build_custom_home_page(all_reviews, all_guides, all_hubs):
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:1.25rem; margin-bottom:2.5rem;">
         {guides_html}
+    </div>
+
+    <!-- Mobile Sticky CTA Bar -->
+    <style>
+    @media (max-width: 768px) {{
+        .mobile-sticky-cta-bar {{
+            display: flex !important;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.96);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(245, 158, 11, 0.4);
+            padding: 0.65rem 1rem;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9999;
+            box-shadow: 0 -4px 16px rgba(0,0,0,0.25);
+        }}
+    }}
+    </style>
+    <div class="mobile-sticky-cta-bar" style="display:none;">
+        <div style="color:#ffffff; font-size:0.75rem; font-weight:700; line-height:1.2;">
+            🏆 <span>Rolex &amp; Omega Alternatives</span>
+            <div style="font-size:0.68rem; color:#94a3b8; font-weight:400;">Ranked &amp; tested calibres under $250</div>
+        </div>
+        <a href="#top-alternatives" style="background:linear-gradient(135deg, #f97316 0%, #ea580c 100%); color:#ffffff; font-size:0.75rem; font-weight:800; padding:0.45rem 0.85rem; border-radius:6px; text-decoration:none; white-space:nowrap; box-shadow:0 2px 6px rgba(234, 88, 12, 0.4);">
+            View Rankings &darr;
+        </a>
     </div>
     """
 

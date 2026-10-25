@@ -521,17 +521,27 @@ main.store-main {
   gap: 0.4rem;
 }
 .btn-buy-deal {
-  background: var(--deal-orange);
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
   color: #ffffff;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 800;
-  padding: 0.65rem 0.75rem;
+  padding: 0.65rem 0.85rem;
   border-radius: 6px;
   text-align: center;
-  transition: background 0.2s;
-  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.2);
+  transition: all 0.2s ease;
+  box-shadow: 0 3px 8px rgba(234, 88, 12, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-decoration: none;
 }
-.btn-buy-deal:hover { background: var(--deal-orange-hover); }
+.btn-buy-deal:hover {
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(234, 88, 12, 0.35);
+  color: #ffffff;
+}
 .btn-view-review {
   background: #ffffff;
   color: #475569;
@@ -966,10 +976,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxxEcaoszD5OAt42SI1m0uSzB0VBOAwNuUqu7962HGdTgG6derJVddnObR9E56HRuBi1u5xd8Wkkc9OVOHCD9IxqiX8Dmb4usWV0c0p6a526KN6HPDjpRHx5lDzT2pJBUfg0a8Dvb5DYclDzc3XLDf6VBqNxrLd7YEkgyipRb82XhTF0NslsKjJQc7kNKswuwVtB2Dh6zs6gDDgDknipEmrAJbQlFfGY7yhxjknn14406YNON30yiZofjJuL9sEGqIzT8BSsZILHVAYS7eRQT9Uj7hFKrMdOvdrjIrPF0Q2uNTlVZNDInqmTiJmFnMHr20U2JPbwHvqUY4az0Z2tCNwcSKxlmnrTTWpD2EWxLxsIxPaHf2UtVXgugIW5E0wye6EJjn1j66A8wS5GPF6oGlU7Tdy9Afi1y3xb4g1HCpSCCjcZnzzEgx8LgAmvSs7XBbC9lZ6RKL699cBXGcDNO5FHsKUQXOpcMvWkJEJTRJvEvmrWzoMVxmYaXc2gnKoaN8uWhKnqoh3aJt4NDYgfyaeip6aPl7QQu1T191RHrx9qaAGckcQ1dai36nbWVRqpy0yWOd8RZO6vQpfKcgYp7Tzu157HIwcNDmt4NJTvXJHQJS2nqAZuiGJd8MFpsWgeRbjNKuD6Qjiq7hv9x6oWDFaTt" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/escapement-time-militado-ml05b-vintage-miyota-2035/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1008,10 +1018,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxwQ25GzYe3MCW3Xxyt9TXw8WmsAYFJGlhHJ2umJskeFicuTQdCNJDO1Ss5soVHLBvUkWm4a016FbBgnaFkjdWCFzEr7qlisaowmQ2gth83b8TLXZDDQlIVpvQ2QayVSb7dqRSotlLQoVTDOAiCZ9unkG7vtQ7SYmsWhoN3rBxc4znZnb7HlzoaTqkFjcNlsSfJIPIhjekNnMRr9bAzl1oGRaPJ8GQ3gXuVNoegxsudlAJIyne4hnD1g8vtaT7ivAdSsmAVQa5ndZ22wMfRtyJdzR9o5yaZpp1JrZKMpbFnyIs7b1ztH6PtzlLhiCDPt49xu8gFeYP5BJAo212Ra1JRkXMRM9eTV3oZnEyRq8QRPfKwUvNvUboQf1HAGuQuCKNvRRr76WXvt2opd6RM1ZzMqZ1LKmNwRUnRML13NUqpyiU3T7OGdyRsi1DrJ0qVKxp4EGlTMT0IF778ULcPduhmAlXMp8cuUnZx0AMedsL01qTTwq8A2YrwRCVCTd6H8WRB3PHoT5thMnC6yE6WAuMvcdIdav4pG33cratKfdFer4oyuOBU28ifXue3HBZmqiomTl5MAtx3c0U5STP2R3wcjLvAmPDNUSGgyYIJ0PNJcU4nd6NtlGqy7RqQP0PHU2HD44djGpAZ7F4zcOVJ9CofYB" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/escapement-time-tpw-field-easy-reading-fabric/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1050,10 +1060,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxRd4pbFDNDrn5O8eoBCIB3e2FFc7J2VTuODHH1VGim9PdJS3a7s7ilPRmZKW3DIiaKuD2eaxorz3XJGa5IKrlprX0OSmYj82Vwrc41aChxGxtLXT1l5yTSYdMx7nRhWu5J8eUqpVmNx7iX3blnzR4Nivv8PgqJsfi1qlFBDzOyWtgzlioLo51o2i1VsR8CuMOPfXsQ1aV3QOfYw35cmm1AtXjD1stdDQCG81DhQvAsZpSnU0dhlYEfMs00zX8Fszapt0YXSllhEbLuUbbECtkWxwc9vjDfrpFOOhedxo58DAAqxyDwFirEQBVfZyvV8BdnvzeTHx8xKQZ1K0fSmjPjuE0NpaNtW92kibcpmMcn6slZCCgueUqmgg0Pt5iVQGx9tV61j4KODEi60vT4GxezVjG8tKedju6bMQ0MyYTlUi3XZozk8qnKt79rnJlSSOmp5w15wRIsK1QbPrINaJRKjuKfaMvsI7okQFIxUvTAu1p35OYdXKhWD7NPtydJBmJShGfsfvrP3GMbdETv1ps4kWivSHSO6xXebOM640JFGGpjFiMB3t29If3MCeSiUpsOMYlquYOXmnkB0ae2uyluPC5MDL407Q80z8grhcfiHFlvRXdBmRtE66cm5ASZs5gxiO3eIM3sY0hW4NAEkKT1MR" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/escapement-time-ciloa-2026-square-men-s/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1092,10 +1102,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxhCjvZzXZNb6atC6hqUCJ6YpywyFZ3rABMWG9PfabTGsabsnRAtpysF7jHzjA3g5qHyL0EOHzQRCy9vP9iv6cTHHLd171KMTDYZ3u256i9zfCQQ5v6ksq1W4MDLTPsairhfvjnzgnCS4C6fVXfmb6e10xl8RvSWk231vLIvFVRypmGKyCQGi3vHsCgSKKkU3hk9e44JclQFkyPVJnv8gImoIIyVymBhOQytx9qh7948jzjKZ7NiBP4Du9RrBjXMN8AjI8p5n4DAon8kl887iQbbwwvmewDMSDOgEu4aTAdjwi6NsleHB76GtLuoAR7cVAx9VIGAUCYoZxVft23WayPPokxA8kDDD9nxwJ4hGJJcYMZUt2k4bQPi3f9E6Hf2TCSIfiw1SWpBXVdDWwSe4PBVBN8TW0JFsn9OHdlFpyUuugDJDTEbEwVmJqm3AanyOZ1dpWXQQj8HeJgr0oATMayYGw1Dy6dFpnj5LWAlqvBCHrH8g42i7Kx9NeaSRfpUqrY8Ek5jvyYj0zvmx7GD3Ht4AaQaSQzoTYGZ63GxBifmmScZ15T2qppYYVhF9eo6QQ5NnqgYAjlHnqFRnJG3eGDKxusHTGlx1Pf6NOhpO1kdMJ3PWJu2FUSONxEjdRqX6af1EJI1ind6bT7R7lhgEy4QR" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/lobinni-2022-dress-men-s-auto/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1134,10 +1144,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/NdpwztbAIgDMmxGbP8fFks7yUFfsHjzlImSYmA68h7xlMRgzueFsRgokQ9f9hcpVKttxtQE2VzIoqkXJXrpOr6uR3zv7mP4CDO9CddoFf4t0QE5DXPy8Pgjhz4irfQSEjEGUmy5yF3A5gJ9h3NYjLMgqIMqa3zcpq5E2BC3W5EbV40Dm9buQxWpZzw1lbX8Zm2kZtNIa4KyDieNjsH7IU6Yv8StELKVvT9r4eFAaXPGhwHsgaDqdNcmY116r3GC2YvsOopeiiZPhJrV0cwgOQDSkW93v7gVKDqPkXyZF1oSWa6wSAOeznMFVlVZb3h58dGTKQ2wk8bpk4joydWRFRAM2Wx1JaIgxlEMOPGaCL2Yy7sQAKC7wiEsJYcY08RGPnlEyUVB4Th9TnRknI22HjjufVjXdd3vY7rVzmfjVLwLmUEQwys0Fo5rdNMfeFmKhaPje8BrGXpN5Fxg36cOzwfifUcuFkbtDdvhLOFiu0rGjF5vdfxmGJnks4KmCtIvx72R3ogqT4ywX3LWmqvqLtkBi6kvt7V62f332884dbiLeE3lD2tjeLcQEGp4Uo4csYcrUFbaPThLeh9btP8sKVYJjDAS9M3ycYmUnPgafNNIxdY4YVl6Qe0qwFzVeFyOtOIAEvJBequoXTHzCnbbexL7i62r9Tsc9BluUMM1GTUApsAq0QjnEPTipg8jImv22eu4rR5wSsnNRDNWU0JrweFvGUrxpF96qFmqeU1DUhx9RV3sQUBOav0BAiqBR3vfjmUm2Tb34Y3BWil2epRXirFbaAy3VW3vtwkWq5QjnbPJtCEIsTHTn9UcXRPZW4oHbQglnL4icFgMhLOgnYayoE8On3TF6luK7NwE4aZPrmpArrcDG0LHKZzbLecJYA9fWbn2qOnF66FQ7ZRUW9P4ZYDqgfART8b1L0y5GTdwZ5Y1fXv1yuomagRzt3ENNXfJ8rGt49H3Xztgeyjhm6UrpNKseNVKwizh3apsEFzDa54l8B" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/lobinni-l12026-men-s-st2130-movement/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1176,10 +1186,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0Jxvz3Kjseg4ukfO9XxQJtyGKQxQDIerHiQlaBP6OrgCKNy623OtCz5IAzbOl3Vi7VpD9wwf8DLmmN20kYynz27dSeWop8chikF9uZSEbjvKFtQHdz0s2cOqqPIqTvdyzigHFxLYYJRWWUw6k3reRjfc8VJvGSZdemMrTXTZFp6WCzybscpWNGVbBX5poFBDqJcXqsCaRmz9HK7Es8TFdzL5tHccxuzJzCNK8gN4iGTGJwU0IyxZXxts3UnzdE8AD6NJ67EgCnrRRotMapn3fDJrCND2TFsKBO8BBGMoKeW5WwXkghmSDP8xg5Jht1PR2z2VYrmxpPbg9YEHrQl02r2SyoMTa0PDXqQLvvPe4KTpKSRCPx7HMD35KETwrmBAbNG2UazqjkhTstoeAo06TReQNE6xgR6C9fb66dvrsQ3vtObzIKGwWVR3mENG0FTLxNNOCWq8lVRkCDC8F2QV97xblsayIFUro0wEaM7UxS3bPI0PyrOSc6TLDcpSlHaGJE4QH4LCyBkMFnLgDwK7KaR6oCsAvzRLuEGwVwxMqMsa5P2vPasEsJ5tzPnX96MnzXMS7YShdQumDi6lPRKm0UYXTmG0Jk82Woku4lpmxg8bUrflg6VlvgqZsnzLuX6eiTBLECXXSj7jSiyTLHhUhjT0C7" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/lobinni-switzerland-luxury-2021-products-mens/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1218,10 +1228,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/NdpwztbAIgDMmxGbP8fFks7yUFfsHjzlImSYmA68h7xlMRgzueFsRgokQ9f9hcpVKttxtQE2VzIoqkXJXrpOr6uR3zv7mP4CDO9CddoFf4t0QE5DXPy8Pgjhz4irfQSEjEGUmy5yF3A5gJ9h3NYjLMgqIMqa3zcpq5E2BC3W5EbV40Dm9buQxWpZzw1lbX8Zm2kZtNIa4KyDieNjsH7IU6Yv8StELKVvT9r4eFAaXPGhwHsgaDqdNcmY116r3GC2YvsOopeiiZPhJrV0cwgOQDSkW93v7gVKDqPkXyZF1oSWa6wSAOeznMFVlVZbwqgwjifJC9xFG7KpMmGfKesXyVjdVrwYhRaQp06Lg7vqB10GtYVrhLwNiY65ckbAAvD4Drv5UmkPTcnfm6iTqBoHYd8aHnZ5GXwltU39KmmEnt5bImML7rXvYH2xwpsHZ8NJfXUvx3sIoghiDd2qMSDd6fq7wg9I0YXWotZG0Kptkw3XIcXZRt0Os2rSxJPk3hfPpOjgnanL9DglOOjNmFuO8pEFySOZ9QhRD46mrotsYQTMbmSOP4zdF7SmpwMnw8xnvsqMyAgXEVtYFnliem1Vb57yNqwKq78uapbhwYv6rtJZr5wJwrHMMumeHeEZHBz56YA4WQWlS4LkG5GpblFSEHZrM308XnLeKgVeFvbSN2ZwAZewbwXVz3GlfO4YY9Ua61IdirTXnyyJHRAwSht7Yx7RZPBaz2SxXJmWm53hRG8obRmIAQtyv4YgA3uQemsWscdnTHYDMiAOabJFRcR4FSLsUjoYnk7IwfKzG5AhVlNlhobBWubJaXJ6DFJVXAnYLYgJSYfGKQg4ttFvFXdjK1kIPQsBElhMMTbtw2q8PIecAWfetfQOuTlv4YaniDyr1wJGML3IHhOGbYw177swAOs9Fca02nzc5LvArFehZEEuVNEYq8ha7cmZ1r20auUlV7p8bNq84e7xXslOwIsmbPP2JlGBfJw5HRsVfsya1bIOR" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/baltany-men-auto-pilot-36mm-wrist/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1260,10 +1270,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxI4Y8YAI94nlsMt0MPiNgp07PogHgmBQs2pv4Lj2nwqRyYmrUWmvLOwEKWqIszMMsMAYC4nXbAhT5C7FLSxSNxd3RNuZaHpiGHEPT3P1xiL1ZcUPk8yF7CwrFqJ34Kq924Ji1oWhbCWi3yxym9VNlzPWX47PI2kn3hMA0R4cGi6uOKvMLhG2VU7d0vANQR9HJhy7AIzC3FFehlPprh8WZF8pEwMLpxJnidAmOUoUf29lfEI8ISy5fW8DTYgGOapZAKbUAE8p1rm1lhXaEY7b5wVWKVOWC30P0FN7MM7Wv5PP07Kv3TgEbiAjHVYn5MwqSpVBuo5X6onBcKF2lo0XhHxHNVocJfYH4jwIhpprkbkL2CkYvb18jEan3bQHE1JkP2f5AmgFDGF6NLGRGGwG78SVVOQanB1CC0Fr9DgxZYUBDRe9BRSR0PBcWmJql4STypQlXUHJe6zB7cfjXAfyrrOzphSIbvDwdGuk4MJPEx2m9VC4nI13Vr0rJOhXEDKEYrK3cjL9YBrmPieTverRZH3kjKjCSlkEpLYzwIOCfI5uu4eRoOgjRo6UqGY1STvWrwPbfI3tb8ExdY2OzJkJyHiBJOUOk0nILkeVGWDjH3G4JV2WWDMehM5LtsabwGKKmTt6b14kVqy2IF107uHUFyOr" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/bobo-bird-fashion-square-men-business-analog/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>

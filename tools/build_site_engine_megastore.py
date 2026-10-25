@@ -509,17 +509,27 @@ main.store-main {
   gap: 0.4rem;
 }
 .btn-buy-deal {
-  background: var(--deal-orange);
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
   color: #ffffff;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 800;
-  padding: 0.65rem 0.75rem;
+  padding: 0.65rem 0.85rem;
   border-radius: 6px;
   text-align: center;
-  transition: background 0.2s;
-  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.2);
+  transition: all 0.2s ease;
+  box-shadow: 0 3px 8px rgba(234, 88, 12, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-decoration: none;
 }
-.btn-buy-deal:hover { background: var(--deal-orange-hover); }
+.btn-buy-deal:hover {
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(234, 88, 12, 0.35);
+  color: #ffffff;
+}
 .btn-view-review {
   background: #ffffff;
   color: #475569;

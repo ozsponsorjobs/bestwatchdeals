@@ -521,17 +521,27 @@ main.store-main {
   gap: 0.4rem;
 }
 .btn-buy-deal {
-  background: var(--deal-orange);
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
   color: #ffffff;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 800;
-  padding: 0.65rem 0.75rem;
+  padding: 0.65rem 0.85rem;
   border-radius: 6px;
   text-align: center;
-  transition: background 0.2s;
-  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.2);
+  transition: all 0.2s ease;
+  box-shadow: 0 3px 8px rgba(234, 88, 12, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-decoration: none;
 }
-.btn-buy-deal:hover { background: var(--deal-orange-hover); }
+.btn-buy-deal:hover {
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(234, 88, 12, 0.35);
+  color: #ffffff;
+}
 .btn-view-review {
   background: #ffffff;
   color: #475569;
@@ -966,10 +976,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxgXmNTicRXFok9d51pYBL0FNJ81YuIiGvGXISiBtjSU5nyo6LYg8nLgtojq14ouPG7o6cbroLwL4Lx4dehwW7pIgiTC7fQzuWBy0hXs9mnlQqtkkWqpEtWq1rJ5WMk5xMxwt2mSSeEHmtgfTNDpXGut283VwfPrT6asSIJenVGzJtCf561AsK7skTrO5nV7zRzVwMMWB3fkFOneIVfPB2lCGj5uB30Su4JHnkIWM7GSWS2R997PjiIC7zoKb0p0BHEde8gyckp5gndfm8j1g0xOTPMwSyo1QhPRN5a4mGHzyMjNMnETr3RUq5cnySlylPdKkGSMUMCEPxUMwHHBdDouTL7AFecQ0fPhqMyPi7yG8acXYhsHxFEqFewlZFFILztftCFxUcRprJQBTNF3mr7KdNZBhbR7siyeqInS3VjVvhVAZ9CL6HoSXbB9spzXuhAAIlbKnv57GFXLXbvwYASG7aiN3l90WSoOBShB8HHTQh8pL8WFpaEL2QOMV3hlt1d5tBkssswremRiG6NqVa5uUwYTTYxxRRpz8gvMOi7XI89WoEfXiDYkW85YxBjp94V8O1wkgmOxz1Dy8iT5we2WWnul9veOfT2wXuWqdFxynAuNizhsYJW887IkU74HqvWhK8nFDTeoN73tZDRAQzwLZ" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/addiesdive-stainless-steel-men-s-european/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1008,10 +1018,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxR0DHfeJeR1xnEcGR9jVXhrWabftxwmBJQIAJyN5qf6tCfvBTEdkWqR6Fytjekinhdhq4ldg1u7bD4w30ezKpAL5vJIX56F29j6kyV2LxbLItAh5N3ZJOhtXs78kGWCMPUnlJj5ksFOVcjrrzABg8PVXQhS4yGqyeDr7jqwNPljQEcC2wtnQ8KoDn0KlVHjIpAfJOVlncVEBMJ7bd8Xx4F4jmbHGRFsIXgSUOPQF49VsODV5BurGKrcOa7fnlgY1RF3PuzWXnI92Ep3sP9Ck2uDLavJzANlcjdBUJOTJrYNDoDJbQndv2N6ANuOphQBoX0idNS42H9p45leYp3oFE1VEYYoHrtmUDYJMxTFVqpnwCISdQkeo2rit2JHxA7wJlacoX3zqvGU1WKCbm0knq3ovxoASGAvA1oAtdbbNE8M0cR5bzwlRXWgb63whTg6gy0PHtZfpb0QGhKxeY6r8cuAmCQB4usrIFRaWl3TYmPcym427hTlmDmKoDeC4gxJndqp1xiyLu98AUKVhthvGRgccYPY25VgZUa7pWdHuJWTrPLpDNzXC2XZJVRdxSe2zhcPDel9dZtpq8PbwxtQUXwHM3INdbikW8uYd4PowPrtzRE5pIu8g24z6kRltmgqOvtQ73z8UnnhEJ44Tb37i9y2f" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/addiesdive-men-s-classic-with-ceramic-27/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1050,10 +1060,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxgSStaeR0wmdrwawHyNdG0ovmpH7racvit0bUH0Aff9sziSpCq1XxqmYcTSQaBhdsmMFJpFUsxVaZkbKQ0Fb15Pptv5KtfXZQMDy30sWTJUBCIfEbSbW250hTqGvCi6sOz6ej1U7jF2JrIBteNtX3JNrjBmeRvbC21epTnr46ybst3PujiDfs3a0c0eK13lv4pO2Frl7wjfRKhlQfUgEntJhst0f0BvNRuHdEUqV8yHprl0feXcCHnfCZ1d4KKdaXBFpsEi5V9xJLylEkMkW6J7Jcs94vuvbvsQc1auN8ruJtSAG7Ddass45rPY2hA4pX86WeOBYkCusan74vh6ZxjyeSmplA730ty3Q3ZAtixEJPkiIZECYcr2l9VjtORPH8Sd81pkRFCNA6CMlOzJA8cclTjyII4eeBp7LJXMvJSE6sUyzHcZOj4blqMklDIwaM4Gnx53cbsm145a9YiFMnUTnqC5LJfXbR27u6fZK9XJecND5LWvcTyxGR06JZ8PaZDdx13g5PRVNynDVkXVBiNm6OMhpIjLTQ7qbKm7HfV349sAIaTvzLW2CnsRfIQQG6ZpJubQx2d2g96mSKodGPG9Sdy5KGw19nN6ptt2oIB2oqFXlEug9f1u7UylvQ7DyKWIDTkhRCRZ6f5SYOQBrwfhv" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/addiesdive-men-s-1963-pilot-auto/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1092,10 +1102,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxRM4VxwOJbye8JXnwt9ZMThAHczzRwpLbZfBkzK1PCRMN3zZWoECk0ak5OpnNB5RDiYSJaRiFIS0gWb3we538w2TtLeAG5Dfs0NxKDw93QGSkERsJ7Ku3Mqp1dmWt06oCAspV1yo9c1BYZAsrow5h9bEp36MT2GpE2nUlIdqC7NvlbKqJBgcByHxMenGU3r3RmWd7EgW6x7uToJ68EaTJ1QzYlcRC0w5KQ60TaU5wffW5c492zuFQYvJQmpSdUtRGz37QCIJLYkTzxIdQ5lQJrnuFnsJuqRIA6LwYN8GnXYRpAHnZLgy1FKZK7lRTIdHcSVcGiizXp30zxYsIBSsXuc5UsonycYFGHp8ubpb81D4YLznzGlB0unMUmMJYNmnYVfz2XNfeKXAGdRl2sp1oiaG73Khs3bKCIH3BZTPi8UcYNjdzPI0sMty4CBKIuCeKEJIayEdhl5rwLesU9z6C8obAU0Elh9CpS6fn39ElzgoFoX76pPfLcJn8b3CxRG4QViXbsTE5rxhhJ6lH5CzASFY9wf91g3l0hKU6RU8KLAp9JS06JuLZQ9Lq62RPIfHiSGCDLTOCEw7v2Ciz7gdgYIwbmIY4XQA6jgfkTtd3srrPZTH2KTyHVndFTJZSBhgilU0m9DEFgg7hjLSXCx5WgcL" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/pagani-design-v5-moon-men-s-top/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1134,10 +1144,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxgLpIMu1cbQus61D6gU0DJWTtoYYZy20gkTXZULXU4dxgCYHibDt6UMWQwF6BN4hEQKlxalnmzHObG8js0dVc0GL7j743Q6cGKqMOF9pSSMrJHVTfpau0CoIZ9SeJqQmMfFHZgVfGXNcuoYQvVzoAfnayY2aXIoXjqYpaaN1cXGMPKfocDKAIKeww4DE41LaN5RizWg8qG9NF00u5jBaaXqGSAx6YNi1baKFwheAkhD8jA41vWkVybC2YOX8PrmmLZbYhpxXKHD14DNrV9rJ8Z95mf2yfTXssifZDHJWV82HKiAal0VDnbGKD0A5WOO6NLaES7NHzCpZRdy33Oesb2yxZgQs7ruxRtghMYLdYdL8zZoaM2154Rcx3VrUJJpIjLlemoLFbKSKOqmAhveD3S8219zdr3f5qGqxgUx47O4BDDgtOec9cKtEVpY3EeiDGxOAbTG7dGrkfTHxGtMA1tYaa94iEBX6OUlkczbjlTGud1VpwmVv21WyRXSvBis9lZiX3AvMJ5mTgaLoL3mFLh8xefLW0fzAbCL9nyatf2kYd3evmRrUSSZ1euQoaO0Gyr7u3kIclBp0aUUylgAfhY6TwVWAABkjiigBd0S6mwcrk5tBJxiPM5qZpGVTKOmvZzuGwUS0vUy4Tvo0iECAucqn" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/pagani-design-2026-men-s-top-luxury/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1176,10 +1186,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxHd3nUYcWtVxtTya8tCkU9HcO1EipiDQ6ibDgK8dFQgUBeSdKFjJhQosjt4KN5oOv9vefnHqBNTZFcMDNiHPGDc9XjQ9pzXa9Tba7TV0xe65xYAdCTWFO5qor7SJPorgAPLadXUsi5tG4GDQkgH2VozHTxqD9iYdCRUOwSydZ7VFMU0GVgIgNnnHqBe1taxk6OfIPPlW6FykKCgQ8B5N7KOggtS1oOmZxsm5bQIFeYoVXSPd7XAdZF3e1PS1BaLomm2YznZk2l8CXvjpvMA8FBz6JT1MLizHjWSWhhvWuNrHFLYZwh45brAEVg7IzidbSB96R5cQ65CDtXyKO9a2VlGIOfgEGe0hI3elRYJqVQb952NCq2ksKv6V2BUh8JpYX8ZYvGG1yb77Wb3Xi9n3f8haPk14rBuHHjrWQkhfze4FbaImQ31Ob0oQyQIQY1nQ3pCY0u4Ry8o5JRteUfkmcqbJ3yOigzgxirQyJhPbweuvNkSuxZipXiUMgDXhgn4kWHUozshE6LpKkNxArEbjw4xpMQc5vTv0NE0zFqLhZ2sbIKjZ2HWnCZTMOKBwU6DX910Vdph8xa2135WSoSsR1fDrZ5IsCrp0AgkelruFVythXM2uyDXESalVZOuX2q9VzZMu5QOPNVQOQOPp7AqM4vn9" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/pagani-design-2026-men-s-top-luxury-31/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1218,10 +1228,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/NdpwztbAIgDMmxGbP8fFks7yUFfsHjzlImSYmA68h7xlMRgzueFsRgokQ9f9hcpVKttxtQE2VzIoqkXJXrpOr6uR3zv7mP4CDO9CddoFf4t0QE5DXPy8Pgjhz4irfQSEjEGUmy5yF3A5gJ9h3NYjLMgqIMqa3zcpq5E2BC3W5EbV40Dm9buQxWpZzw1lbX8Zm2kZtNIa4KyDieNjsH7IU6Yv8StELKVvT9r4eFAaXPGhwHsgaDqdNcmY116r3GC2YvsOopeiiZPhJrV0cwgOQDSkW93v7gVKDqPkXyZF1oSWa6wSAOeznMFVlVZDHgbzMJFJsPX4fT9vGRgNj7LIL2LG4OllDRQPFP7bRgeGiA0fyuXC0iHFZybdYkncf2q0Jr44VvVAtrvHtmTW7grmMCUuDQDQk9fNjSPX22GrDYMhyx6qdyX82cEMOuM8JTweZV2jHpDsAQysbigR5OTkHSWw346rtRktDoutQn0H0D1lWHFeQFlf42GUiHGVQA6lFZmnq5zI3Hjb0r9MkFrznzHGkVNYR3WibdCAXQCsxBXrFjW3d5EO2OgjcVhSCswi2GhjS24DDfQeJq5NzpKByAHKUvLFAkH9lKgrfp1KRSl22S3fpDpQjoh26GbFmb1QgUGvASzbsr9OwRVulwc2UNwfbajs5iKdntw5cgzAQZ7s86yHfLOsCToCVaXGfWXDs2iVx6z2RFJlZQdrmpzLgW7m71YEbPweWp0FsNV23CnoF0UBwGJ0ZmAiNmYxbbNcGLnTbiujQjdsZiWxYGh3OsMD9QaWxlal84olitHijJpNQ5n4mbnjgeazAcw0SyauB2UdIoueDxIifzYx0qcCjV3PZ1K5igJDXlX1QUu199qo0RbzZ8v29XStIZbJ5h2rJGzKTH52s0e15eumOwtaCqx2XP3NnpzixYZnx9HZ16y2i0B7QBX7SZ8ukLkOcLM631NkQpnvkWR4I0smR1d7C2elgW3umYuMLhIWeevYUVoj1" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/sugess-40mm-men-army-1963-pilot/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1260,10 +1270,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxheCkZ74brcDFLslZv8WkTiwFkDwTSjXHezzvRvc7buSuvvow9YXj4ZPoyEvgPpsf26b7HufPD5ZpWYNBrGezqfAOwQGYjHlnhO7PoxeU5Iy4uh3OrLBmqgQbhENfR68lHmfcNp6RCRwFl6hlrl1WbJ4lxGUVgjeOWTY7jGHttxkBe73TIh8au6VNAaORKN6lDRxFmD1wS8zxYieqPjkgPbOssPScLRZQnqYmukTSXOs6oeOQENgZFqpexbTK1HpSwjIDn0ipmn7qHZxG1eD7kbV9l9oTdmn8cobqnayjnqJTxQ5zwcBYn6rMGDmD0HUrLIhDx1HpZwuYwck0sy2bkoWvWwr6wjbBP9ozV09GKnUhjMJgd2C9ruMYi9zXxw4rMIZsdxqhSvj26f4EUjSAaXhButrwynUWf6OKIAM9ZUuCAApn0qRjdYwaafa3XVRcCrriBSrwy7O6jIqQP2sbBxJxj8Orggh0GrhbBzdOKP4FKaNleWpUHNd46fJMJuI8MUV132QJCO6GIeKwIi0m1eTxqqewBBXjThih1LMugTwHw3NpBrwrweDM3MFdva10gPdDu7t9GqAYcaevjjZCjHJJTGXFW1T5bkmOrLXWXuV1RvuEip2R65mnFieY9vA0BESXWDhdkfXDuj4IDSsv1nH" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/sugess-pilot-st19-origin-movement-swanneck/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1302,10 +1312,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxH4zIgTcrnfgMgDMrmGao4DwfSnDA8ci5Aw94UQQbbmZgjsr6tgFUC2wHYN89W736ZGdQH6viD7VMnl5xnrf6GWGuZr9nc1Y6aqTwkcXrBufbvUFRptP906dnOrKPe67vQkh5Y1oaBRi52wr9LZzR2CM21nPH3HrwhZ66c5nlSMMteiAJBonRcb8bk4YthXJA7NBVRY86qMwH2ZZrV56hF9GP4n8hxYnG2uRVrkoFPHjxRgFWm7I0HDlMJdfhYVx758lgjzE3QRgaurtoBGRQ7HxAXjgg9PZQCMe4VTqkx9mNBSfXAaycjVbFPEHZbRQ9GLvkE8waSPD2Texa7IKueYWnmJBWs28ZehnExTkRp2f6JHOEGYMzGZrRBRGPrCBqE0tVVvZCCwdTuf7NbiCfxur7RKNKqEAPjRGKyiTBQcuu5NNVjNXWnot518az0vULhTfvaeo72jct4YALNrvemeyuPfh8HdcexCOYLDLDe4lmZbplW7x4O2T2fQL3Yxh4YqjgaQYQIuB4g0XvIGkPMRJE4gIdi9JaM7jcCBi6Kvo7UR5TYTbSGk1KRLfKZHKW6jOJ0k4c8w6PQ79m8Nv9Obyge1RlZ0SktuHlLskHzOMgX5EN3XfjXinhSOLLiU5naynwZjGwYO3KziXfR7fgKWX" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/sugess-40mm-men-army-1963-pilot-34/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1344,10 +1354,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/NdpwztbAIgDMmxGbP8fFks7yUFfsHjzlImSYmA68h7xlMRgzueFsRgokQ9f9hcpVKttxtQE2VzIoqkXJXrpOr6uR3zv7mP4CDO9CddoFf4t0QE5DXPy8Pgjhz4irfQSEjEGUmy5yF3A5gJ9h3NYjLMgqIMqa3zcpq5E2BC3W5EbV40Dm9buQxWpZzw1lbX8Zm2kZtNIa4KyDieNjsH7IU6Yv8StELKVvT9r4eFAaXPGhwHsgaDqdNcmY116r3GC2YvsOopeiiZPhJrV0cwgOQDSkW93v7gVKDqPkXyZF1oSWa6wSAOeznMFVlVZDdJULLVpVVuAzRDX2QlNSNHyEGLrDbyiVFMVbl8XqW97fO65aoMWaEm9dU3zECTLQBnSpMibuMrFNS0uVdsqFuBiN6W56VeyuSMIsteJXFb5PG2DNZ0zwoDTEDGWngMmcHk8TiNBYgpmmh706FAyzcJIyqKfL9nT0MtwsNCPqdgzXHzEu3PFnKQFosE1i5RLVcwHI3cp7obHgeer30KcdNx9G1WqI7FzjUbqdqiEmH867YoHTbzC4J2Ds7QoDmU2kMX8Q1ATIIUqeiDV0tdN2Kcz6uAJXbG960tLX3DOqAfVKZDe3Ukpxo3iMwYYqKirCfYZDmteyu1DBSCICUqrsZofOparnjgXdnG5tWdcqjEJgCkeYcKokyoER5L37vSCGcqWHdKKKzmdjCRO05Pcgg6jiiIVW2c2qY2dqNYVaTGJ4mpPtf7acsTsGGO6CMoDITXcSQEgBIFr8wn4YFcsHwAgk9fUxREqikOF3hJA7bZI4sJgSevnWbmd1LJjIdIPfv1IK65py413ITA0N4cJ2XvaIsoYYjAWVRX0zp4n6xwZ8uGiyzac0ceOG84NR8lFt8IFK1SK65sYrDZztZqEnug1ub6CHA7X6094EBhOpNYFMpHMBArP63cXn3DnywqbCKIu8zWQHWEBEEljJIstUSNzaVuVdMXYlriYY84VzdaTNfSBH1" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/sugess-pilot-with-seagull-movement-swanneck/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1386,10 +1396,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxhDHqoHLFWphEhftCxcPeSphvxIiVoSCabAGjvHpO2rN6Dv2PCzlhFm7uckxlItcOkdzwV89oi2xA6wOvmzZMUDDCrHbuTul6wgF6CO33egXGwuvP2LdVkeL3yzbUxPeHlzlsgPdGlb09Xf6EuT2q3KJMjqGWhwxZFM8luC6MFkSxAr7Uqcu76XnJCsXVj8yHEozn48r5Q308Z7KNfhddVWeAHFhY2NrfpEIDbXN4ysPI86iF78kK5gtOOC9be9j2DRu3i0bgqGKpLJPmOMpQkDBwNBAjSNJUHbHiHKeYYkvNSjbZPgDkDj2NIgr8fdvllkeyyRuiSd2Vy268KvpPXd6E3iRfJtTtbYPaNF3xPTtAYW9chrUtZiRTFSR77FTkkFjUJA023gcfyh5iT2DdSHcHsffA1nTQRPCEEArP05eP3JlFUpnrOHmlObbitsV7YerUDAs1i9hu8fGx46FABh1KavH9gQrgcDa9O4qqpfznECNALv9hR1p9qtfFCpnfQkw6HAVRkr2UlHjJG9Cv2JHatFXDndk184fR3AjoNsTanVPpWHddSoMVkyW5DjKXS01lX951JzXY4STUdUJrA9FNB0CsQ4jb27wIvy6LJZQfYOInEQ7CJcwfqpGD1xOw0s3yRTmhToEBQpJ2WcnaRWb" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/baltany-specht-s-hne-classic-5167/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
@@ -1428,10 +1438,10 @@ footer.store-footer {
 
         <div class="card-buttons-row">
             <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxIBrY6FhEWvrWZcgUPCsQBciJ3JvU0nqRIkZ6NjbS3Zi9JPaEnrm7jMfMEyYrwCqrxYKeEnOzKdOHCpusSFTxWKKuH4RL0HEdoBdW4P63iQa64zZnyOnIiVQQLMAu0pLLo5KPdv8xhvW9ggm70Z7mD39vn1tzFQOWuqWSUgL45PzXvtmIRxtLpca2GlenOXnvDdENdOFKbXptMvMyncTO8NxQDX3ryUeggxqdMaUIeF3SzLxYRJPSVPzUB0vBIOpRq0hAkr2FfhdL3w1fK6rId3U5MUKGnNhNOW56qk3IsXI0t1o7rHrSRKDffuZ1Gzlq7xmdDjOzh0RsWs9iEcm6UpOIszk84uQ4Oj9wqcYVCCui1St3jcvrtU1RN8Ix6bHVYwXgmsrzcxD814ar83IcRHLwdRjksT4sS6QdUD3R4OXT4XIjl8zBzUoibNUyf7k5lXvuaZgkcBn1aDwySQBXtzKofnFyhf0e0a8aOhSgXh5DF6ix5xEWg7rrvj46IB9B9jpr5Q3GJa3Ay4HjM3n0ZFZ2mToCPUajUIaEgZyPLZlxy2ibYxeMusqrLS2oqKprM4DCKxqJJz7jMYDxOMC4153bOaLOV6KZRxO6EGiVfh4y3EZffrrZVZDajNgDu3W89el651KRiQhhVKOZI2q5BeF" target="_blank" rel="nofollow sponsored" class="btn-buy-deal">
-                ⚡ Check Deal Price
+                🛒 Check Deal on AliExpress &rarr;
             </a>
             <a href="/watches/baltany-dives-wd1972-quartz-vh31-sweep/" class="btn-view-review">
-                Specs &amp; Full Review &rarr;
+                Specs &amp; In-Depth Review &rarr;
             </a>
         </div>
     </div>
