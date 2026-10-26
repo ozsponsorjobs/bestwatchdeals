@@ -556,7 +556,7 @@ def render_layout(title, description, canonical_url, body_html, schema_ld="", og
                     <li><a href="/sitemap.xml">XML Sitemap</a></li>
                 </ul>
                 <p style="font-size: 0.75rem; margin-top: 1rem; color: #64748b;">
-                    BestWatchDeals.com is reader-supported. When you purchase through links on our site, we may earn an affiliate commission at no additional cost to you.
+                    BestWatchDeals.com is reader-supported. When you purchase through links on our site, we may earn an affiliate commission at no additional cost to you. As an Amazon Associate I earn from qualifying purchases.
                 </p>
             </div>
         </div>
@@ -799,8 +799,8 @@ def build_review_page(item):
                 <a href="https://s.click.aliexpress.com/e/_c45LWcBP?k={aliexpress_query}" target="_blank" rel="nofollow sponsored" class="btn-primary">
                     {deal_btn}
                 </a>
-                <a href="https://www.amazon.com/s?k={brand}+watches" target="_blank" rel="nofollow sponsored" class="btn-secondary">
-                    Compare on Amazon
+                <a href="https://www.amazon.com/s?k={brand}+watches&tag=bestwatchdeals-20" target="_blank" rel="nofollow sponsored" class="btn-secondary">
+                    Compare on Amazon Prime
                 </a>
             </div>
         </div>
@@ -1570,6 +1570,7 @@ def build_legal_page(item):
         
         <h2>1. FTC & Global Affiliate Relationship Disclosure</h2>
         <p>In accordance with the Federal Trade Commission (FTC) guidelines and international advertising transparency standards, please assume that hyperlinks leading to retail platforms on BestWatchDeals.com are affiliate links. BestWatchDeals.com participates in affiliate advertising programs—including AliExpress Portals, Admitad, and the Amazon Services LLC Associates Program—designed to provide a means for independent publishers to earn advertising fees by linking to commercial merchants.</p>
+        <p><strong>Amazon Associates Program Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases.</p>
         <p><strong>What this means for you:</strong> If you click an affiliate link on our site and make a purchase, we may receive a small referral commission directly from the retailer. <strong>This occurs at zero extra cost to you.</strong> The price you pay remains identical whether you utilize our links or navigate directly to the merchant.</p>
         
         <h2>2. Editorial Independence & Unbiased Verdicts</h2>

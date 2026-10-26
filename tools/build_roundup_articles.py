@@ -8,6 +8,8 @@ import os
 import json
 import html
 import sys
+import re
+from urllib.parse import quote_plus
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DIST_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, '..'))
@@ -514,32 +516,68 @@ ROUNDUP_CSS = """
   border-top: 1px solid var(--border-light);
 }
 .btn-cta-aliexpress {
-  flex: 1 1 220px;
+  flex: 1 1 200px;
   background: linear-gradient(135deg, #ea580c, #dc2626);
   color: #ffffff;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 800;
-  padding: 0.85rem 1.25rem;
+  padding: 0.8rem 1rem;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25);
   transition: transform 0.15s, box-shadow 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-decoration: none;
 }
 .btn-cta-aliexpress:hover {
   transform: translateY(-1px);
   box-shadow: 0 6px 16px rgba(234, 88, 12, 0.35);
+  color: #ffffff;
+}
+.btn-cta-amazon {
+  flex: 1 1 200px;
+  background: linear-gradient(135deg, #232f3e 0%, #131921 100%);
+  color: #ffffff;
+  border: 1px solid #ff9900;
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-decoration: none;
+}
+.btn-cta-amazon:hover {
+  background: linear-gradient(135deg, #131921 0%, #000000 100%);
+  border-color: #f59e0b;
+  color: #ff9900;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
 }
 .btn-cta-review {
-  flex: 0 1 auto;
+  flex: 1 1 100%;
   background: #ffffff;
   color: var(--store-navy);
   border: 1.5px solid #cbd5e1;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  padding: 0.85rem 1.25rem;
+  padding: 0.65rem 1rem;
   border-radius: 8px;
   text-align: center;
   transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  text-decoration: none;
 }
 .btn-cta-review:hover {
   background: #f1f5f9;
@@ -1652,6 +1690,14 @@ def generate_roundup_html(article, manifest_reviews_dict):
         full_item['main_image'] = review_data.get('main_image', '')
         full_item['promotion_link'] = review_data.get('promotion_link') or "https://s.click.aliexpress.com/e/_c45LWcBP"
         full_item['pdp_url'] = review_data.get('clean_url') or review_data.get('url')
+        
+        # Build clean Amazon search query with Associate Tag
+        clean_kw = re.sub(r'[^a-zA-Z0-9\s]', '', full_item['display_title'])
+        brand_words = set(re.findall(r'\w+', full_item['brand'].lower()))
+        words = [w for w in clean_kw.split() if w.lower() not in ['2026', 'men', 'mens', 'mechanical', 'wrist', 'hot', 'luxury', 'dropping', 'shipping', 'watch', 'watches', 'for'] and w.lower() not in brand_words]
+        amazon_kw = f"{full_item['brand']} " + ' '.join(words[:3]) + ' watch'
+        full_item['amazon_link'] = f"https://www.amazon.com/s?k={quote_plus(amazon_kw.strip())}&tag=bestwatchdeals-20"
+        
         enriched_items.append(full_item)
 
     # 2. Build Quick Picks Box HTML
@@ -1707,9 +1753,14 @@ def generate_roundup_html(article, manifest_reviews_dict):
                 <span>{orig_val}</span>
             </td>
             <td>
-                <a href="{it['promotion_link']}" target="_blank" rel="nofollow sponsored" class="table-btn-deal">
-                    ⚡ Check Deal
-                </a>
+                <div style="display:flex; flex-direction:column; gap:0.35rem;">
+                    <a href="{it['promotion_link']}" target="_blank" rel="nofollow sponsored" class="table-btn-deal">
+                        ⚡ AliExpress
+                    </a>
+                    <a href="{it['amazon_link']}" target="_blank" rel="nofollow sponsored" class="table-btn-deal" style="background:#232f3e; border:1px solid #ff9900; color:#ffffff;">
+                        📦 Amazon
+                    </a>
+                </div>
             </td>
         </tr>
         """)
@@ -1811,11 +1862,16 @@ def generate_roundup_html(article, manifest_reviews_dict):
 
                     <!-- Action Buttons -->
                     <div class="card-actions-group">
-                        <a href="{it['promotion_link']}" target="_blank" rel="nofollow sponsored" class="btn-cta-aliexpress">
-                            ⚡ Check Deal Price on AliExpress &rarr;
-                        </a>
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:0.5rem; width:100%; margin-bottom:0.45rem;">
+                            <a href="{it['promotion_link']}" target="_blank" rel="nofollow sponsored" class="btn-cta-aliexpress">
+                                ⚡ Check AliExpress Deal ({sale_val}) &rarr;
+                            </a>
+                            <a href="{it['amazon_link']}" target="_blank" rel="nofollow sponsored" class="btn-cta-amazon">
+                                📦 Compare on Amazon Prime &rarr;
+                            </a>
+                        </div>
                         <a href="{it['clean_path']}" class="btn-cta-review">
-                            📖 Read Full Hands-On Review
+                            📖 Read Full Hands-On Review &amp; Specs
                         </a>
                     </div>
                 </div>
@@ -1917,6 +1973,9 @@ def generate_roundup_html(article, manifest_reviews_dict):
                 <div class="roundup-meta-item">
                     <span>🎯</span> <span>Target Luxury Icon: <strong>{html.escape(target_luxury)}</strong></span>
                 </div>
+            </div>
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:0.65rem 1rem; margin-top:1.25rem; font-size:0.75rem; color:#64748b; line-height:1.45;">
+                ⚖️ <strong>Affiliate Disclosure:</strong> BestWatchDeals.com is an independent, reader-supported horology resource. When you purchase through our links to AliExpress or Amazon, we may earn an affiliate commission at zero additional cost to you. <strong>As an Amazon Associate I earn from qualifying purchases.</strong>
             </div>
         </header>
 

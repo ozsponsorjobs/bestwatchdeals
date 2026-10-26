@@ -1013,14 +1013,14 @@ def render_megastore_layout(title, description, canonical_url, body_html, schema
                     <li><a href="/sitemap.xml">XML Product Sitemap</a></li>
                 </ul>
                 <p style="font-size: 0.72rem; color: #64748b; margin-top: 1.25rem; line-height: 1.5;">
-                    BestWatchDeals.com is reader-supported. When you purchase through links on our site, we may earn an affiliate commission from verified merchants at no additional cost to you.
+                    BestWatchDeals.com is reader-supported. When you purchase through links on our site, we may earn an affiliate commission from verified merchants at no additional cost to you. As an Amazon Associate I earn from qualifying purchases.
                 </p>
             </div>
         </div>
 
         <div class="footer-bottom-row">
             <div>&copy; 2012-2026 BestWatchDeals.com. All global rights reserved.</div>
-            <div>Prices, coupons, and AliExpress Choice Day inventory subject to supplier change.</div>
+            <div>Prices, coupons, AliExpress and Amazon Prime inventory subject to supplier change.</div>
         </div>
     </footer>
 
@@ -1516,7 +1516,7 @@ def build_megastore_pdp(item):
                     <a href="{promo_link}" target="_blank" rel="nofollow sponsored" class="btn-pdp-aliexpress">
                         ⚡ BUY NOW: CHECK LIVE FLASH DEAL ON ALIEXPRESS
                     </a>
-                    <a href="https://www.amazon.com/s?k={brand}+watches" target="_blank" rel="nofollow sponsored" class="btn-pdp-amazon">
+                    <a href="https://www.amazon.com/s?k={brand}+watches&tag=bestwatchdeals-20" target="_blank" rel="nofollow sponsored" class="btn-pdp-amazon">
                         🛒 Compare on Amazon Prime (Fast Domestic Delivery)
                     </a>
                 </div>

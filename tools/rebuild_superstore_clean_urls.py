@@ -330,7 +330,7 @@ def clean_megastore_pdp(item):
                     <a href="{promo_link}" target="_blank" rel="nofollow sponsored" class="btn-pdp-aliexpress">
                         ⚡ BUY NOW: CHECK LIVE FLASH DEAL ON ALIEXPRESS
                     </a>
-                    <a href="https://www.amazon.com/s?k={amazon_query}" target="_blank" rel="nofollow sponsored" class="btn-pdp-amazon">
+                    <a href="https://www.amazon.com/s?k={amazon_query}&tag=bestwatchdeals-20" target="_blank" rel="nofollow sponsored" class="btn-pdp-amazon">
                         🛒 Compare on Amazon Prime (Fast Domestic Delivery)
                     </a>
                 </div>
@@ -449,6 +449,7 @@ def build_custom_home_page(all_reviews, all_guides, all_hubs):
             "pick_price": "$214.17",
             "msrp": "$420.00",
             "path": "/watches/san-martin-40mm-bb58-retro-luxury-diver/",
+            "amazon_kw": "San+Martin+40mm+diver+watch",
             "save": "SAVE 49%"
         },
         {
@@ -460,6 +461,7 @@ def build_custom_home_page(all_reviews, all_guides, all_hubs):
             "pick_price": "$90.56",
             "msrp": "$290.00",
             "path": "/watches/pagani-design-v5-moon-men-s-top/",
+            "amazon_kw": "PAGANI+DESIGN+moonwatch+chronograph",
             "save": "SAVE 69%"
         },
         {
@@ -471,6 +473,7 @@ def build_custom_home_page(all_reviews, all_guides, all_hubs):
             "pick_price": "$102.53",
             "msrp": "$340.00",
             "path": "/watches/pagani-design-1662-pagani-design-gmt-auto/",
+            "amazon_kw": "PAGANI+DESIGN+1662+GMT+watch",
             "save": "SAVE 70%"
         },
         {
@@ -482,6 +485,7 @@ def build_custom_home_page(all_reviews, all_guides, all_hubs):
             "pick_price": "$85.99",
             "msrp": "$280.00",
             "path": "/watches/specht-sohne-dropping-shipping-specht-sohne-polo/",
+            "amazon_kw": "Specht+Sohne+automatic+watch",
             "save": "SAVE 69%"
         },
         {
@@ -493,6 +497,7 @@ def build_custom_home_page(all_reviews, all_guides, all_hubs):
             "pick_price": "$127.36",
             "msrp": "$360.00",
             "path": "/watches/steeldive-sd1970-auto-diver-captain-willard/",
+            "amazon_kw": "STEELDIVE+SD1970+Captain+Willard",
             "save": "SAVE 65%"
         }
     ]
@@ -526,11 +531,16 @@ def build_custom_home_page(all_reviews, all_guides, all_hubs):
                     </div>
                 </div>
             </div>
-            <div style="display:flex; flex-direction:column; gap:0.5rem;">
-                <a href="{promo_link}" target="_blank" rel="nofollow sponsored" class="btn-buy-deal" style="background:linear-gradient(135deg, #f97316 0%, #ea580c 100%); color:#ffffff; font-size:0.88rem; font-weight:800; padding:0.75rem 1rem; border-radius:8px; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:0.4rem; box-shadow:0 3px 8px rgba(234, 88, 12, 0.28);">
-                    ⚡ Check Deal on AliExpress ({item['pick_price']}) 🛒
-                </a>
-                <a href="{item['article_url']}" style="background:#ffffff; color:#334155; border:1px solid #cbd5e1; font-size:0.82rem; font-weight:700; padding:0.6rem 0.85rem; border-radius:8px; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:0.35rem;">
+            <div style="display:flex; flex-direction:column; gap:0.45rem;">
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.4rem;">
+                    <a href="{promo_link}" target="_blank" rel="nofollow sponsored" class="btn-buy-deal" style="background:linear-gradient(135deg, #f97316 0%, #ea580c 100%); color:#ffffff; font-size:0.8rem; font-weight:800; padding:0.65rem 0.5rem; border-radius:8px; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:0.3rem; box-shadow:0 3px 8px rgba(234, 88, 12, 0.28); text-align:center;">
+                        ⚡ AliExpress ({item['pick_price']})
+                    </a>
+                    <a href="https://www.amazon.com/s?k={item['amazon_kw']}&tag=bestwatchdeals-20" target="_blank" rel="nofollow sponsored" style="background:linear-gradient(135deg, #232f3e 0%, #131921 100%); color:#ffffff; border:1px solid #ff9900; font-size:0.8rem; font-weight:800; padding:0.65rem 0.5rem; border-radius:8px; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:0.3rem; box-shadow:0 3px 8px rgba(0,0,0,0.15); text-align:center;">
+                        📦 Amazon Prime &rarr;
+                    </a>
+                </div>
+                <a href="{item['article_url']}" style="background:#ffffff; color:#334155; border:1px solid #cbd5e1; font-size:0.8rem; font-weight:700; padding:0.55rem 0.85rem; border-radius:8px; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:0.35rem;">
                     📖 Read Full 5-Watch Comparison &rarr;
                 </a>
             </div>

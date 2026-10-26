@@ -1585,32 +1585,68 @@ footer.store-footer {
   border-top: 1px solid var(--border-light);
 }
 .btn-cta-aliexpress {
-  flex: 1 1 220px;
+  flex: 1 1 200px;
   background: linear-gradient(135deg, #ea580c, #dc2626);
   color: #ffffff;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 800;
-  padding: 0.85rem 1.25rem;
+  padding: 0.8rem 1rem;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25);
   transition: transform 0.15s, box-shadow 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-decoration: none;
 }
 .btn-cta-aliexpress:hover {
   transform: translateY(-1px);
   box-shadow: 0 6px 16px rgba(234, 88, 12, 0.35);
+  color: #ffffff;
+}
+.btn-cta-amazon {
+  flex: 1 1 200px;
+  background: linear-gradient(135deg, #232f3e 0%, #131921 100%);
+  color: #ffffff;
+  border: 1px solid #ff9900;
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-decoration: none;
+}
+.btn-cta-amazon:hover {
+  background: linear-gradient(135deg, #131921 0%, #000000 100%);
+  border-color: #f59e0b;
+  color: #ff9900;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
 }
 .btn-cta-review {
-  flex: 0 1 auto;
+  flex: 1 1 100%;
   background: #ffffff;
   color: var(--store-navy);
   border: 1.5px solid #cbd5e1;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  padding: 0.85rem 1.25rem;
+  padding: 0.65rem 1rem;
   border-radius: 8px;
   text-align: center;
   transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  text-decoration: none;
 }
 .btn-cta-review:hover {
   background: #f1f5f9;
@@ -1680,6 +1716,9 @@ footer.store-footer {
                 <div class="roundup-meta-item">
                     <span>🎯</span> <span>Target Luxury Icon: <strong>Seiko Prospex Captain Willard SPB151 ($1,200) / Seiko Prospex Turtle SRP777 ($525)</strong></span>
                 </div>
+            </div>
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:0.65rem 1rem; margin-top:1.25rem; font-size:0.75rem; color:#64748b; line-height:1.45;">
+                ⚖️ <strong>Affiliate Disclosure:</strong> BestWatchDeals.com is an independent, reader-supported horology resource. When you purchase through our links to AliExpress or Amazon, we may earn an affiliate commission at zero additional cost to you. <strong>As an Amazon Associate I earn from qualifying purchases.</strong>
             </div>
         </header>
 
@@ -1795,9 +1834,14 @@ footer.store-footer {
                 <span>$398.00</span>
             </td>
             <td>
-                <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JyaEdpErFbJavsWuikS2toSWagA774eLh11QJRpHQ8D5iUjrURolTazcbmIpwNFJFW7Y8s5hs3npSYap5D7PWhpxUS2tQQJ0f5GDxgNWjZ3MMuIM44hQxdVQGesMlkDGD7VTAoUj2d32O4mmJdK9O9WTeTqve109Zkw31ghHXlTKtrVFMfPFHnJQxs5gxPVGhgeLO8osKYfmnmxxE4B2QRLmOPddSgX4KwCxEgg1RMMQDScf8EbfeAjAPg4p23RL7re8fqu13puxv3922PVG0Uf0014qVPUC1WQmXuJ2gaDET9QRNJOGLSXw32WhoiFBIXQ6x1MWubmgTdFtRdz7iCbl8RbEd6suQlGPwY6KtkyO0FCkVUdTsAm9xIftAqx5G2EdUjKnGqStjqAIYvM4pmSNQo4LfqJqM1AssUwtzP97XnbHKzMyE0QShxjEynESOGSMfmYwtYrMSfv1spwHqgo0TqtD376ftnT3SsNuQxifiIt9CedvlJmYXIuLx9drzdmX4FPoAe3PzWzpOXIfglZwywojCncp8T2w7ClaG3yyXvVSAc96nqSzPOR0tKOZq1EUT75Fiw065bBRyNOBW1b05LfUneB0KO11ldc1DVfPgUwnQlP0g9vxYYIFUZ9VOJNoPT01GKUoZyCk2wn8gEC9N" target="_blank" rel="nofollow sponsored" class="table-btn-deal">
-                    ⚡ Check Deal
-                </a>
+                <div style="display:flex; flex-direction:column; gap:0.35rem;">
+                    <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JyaEdpErFbJavsWuikS2toSWagA774eLh11QJRpHQ8D5iUjrURolTazcbmIpwNFJFW7Y8s5hs3npSYap5D7PWhpxUS2tQQJ0f5GDxgNWjZ3MMuIM44hQxdVQGesMlkDGD7VTAoUj2d32O4mmJdK9O9WTeTqve109Zkw31ghHXlTKtrVFMfPFHnJQxs5gxPVGhgeLO8osKYfmnmxxE4B2QRLmOPddSgX4KwCxEgg1RMMQDScf8EbfeAjAPg4p23RL7re8fqu13puxv3922PVG0Uf0014qVPUC1WQmXuJ2gaDET9QRNJOGLSXw32WhoiFBIXQ6x1MWubmgTdFtRdz7iCbl8RbEd6suQlGPwY6KtkyO0FCkVUdTsAm9xIftAqx5G2EdUjKnGqStjqAIYvM4pmSNQo4LfqJqM1AssUwtzP97XnbHKzMyE0QShxjEynESOGSMfmYwtYrMSfv1spwHqgo0TqtD376ftnT3SsNuQxifiIt9CedvlJmYXIuLx9drzdmX4FPoAe3PzWzpOXIfglZwywojCncp8T2w7ClaG3yyXvVSAc96nqSzPOR0tKOZq1EUT75Fiw065bBRyNOBW1b05LfUneB0KO11ldc1DVfPgUwnQlP0g9vxYYIFUZ9VOJNoPT01GKUoZyCk2wn8gEC9N" target="_blank" rel="nofollow sponsored" class="table-btn-deal">
+                        ⚡ AliExpress
+                    </a>
+                    <a href="https://www.amazon.com/s?k=STEELDIVE+SD1970+Automatic+Diver+watch&tag=bestwatchdeals-20" target="_blank" rel="nofollow sponsored" class="table-btn-deal" style="background:#232f3e; border:1px solid #ff9900; color:#ffffff;">
+                        📦 Amazon
+                    </a>
+                </div>
             </td>
         </tr>
         
@@ -1824,9 +1868,14 @@ footer.store-footer {
                 <span>$225.89</span>
             </td>
             <td>
-                <a href="https://s.click.aliexpress.com/s/NdpwztbAIgDMmxGbP8fFks7yUFfsHjzlImSYmA68h7xlMRgzueFsRgokQ9f9hcpVKttxtQE2VzIoqkXJXrpOr6uR3zv7mP4CDO9CddoFf4t0QE5DXPy8Pgjhz4irfQSEjEGUmy5yF3A5gJ9h3NYjLMgqIMqa3zcpq5E2BC3W5EbV40Dm9buQxWpZzw1lbX8Zm2kZtNIa4KyDieNjsH7IU6Yv8StELKVvT9r4eFAaXPGhwHsgaDqdNcmY116r3GC2YvsOopeiiZPhJrV0cwgOQDSkW93v7gVKDqPkXyZF1oSWa6wSAOeznMFVlVZD7ukJgeyxvWeSquNygMg0Xb2JwBVtb2M4qRQl2HN7f2KxHkoF7Soj8BSDv6iCptlbI77foGa7IBssYXRDNtUfFHNCqvnFwxoU672CExu2WEnl2bYOlk8aN020yYp4JRZsJT3GJh1m47OFOETD4lFws7FAEO9OrBBHYsEWU4hI3jjDNKSFnjwlkm9UGzVbNv7r6TGUlbwjJyexp9SMCNk0QqVt9SukwqlyQVMI7NvbZC91Yl0KTvcg4tMsB1QrXIdVFWFEopdyHKQo76gfkNYVjKMFboow8YwI4x5kgDhw4Db0dwCWHROAp61KtPA1LcLRhPggzGUQWLB2F7MNhshWawdytnXn3rsjN9PW94GWjDxhjbwb1MtgfXLmTl9YlMBRG5kaC7ktaDUbFVR1QJsT7PSoCEBOztltK4myw37MKOMGLgmuNDLWylIuBJcVA4k3c8YskYwkiRSoVOzn1Lnc9qAG1341p67NpNGcQgloJmxccCXR8IzWG6iObJYauam1VmvFENidhj3YcXixe5pSaJmbtB55RFGTLODLlmecsB6fhZP87QbSwZAOljNbm4tjBGynVVZKIbDghYR5Ng8tPbo4EmBkcO4mUY8sELmO19IUEmIQSq3DrCAD3xXX1ujpKUpZj7696crVlx4lzHlnz6sP6LidvXAU4NOc8YrpiI8tTpmxD" target="_blank" rel="nofollow sponsored" class="table-btn-deal">
-                    ⚡ Check Deal
-                </a>
+                <div style="display:flex; flex-direction:column; gap:0.35rem;">
+                    <a href="https://s.click.aliexpress.com/s/NdpwztbAIgDMmxGbP8fFks7yUFfsHjzlImSYmA68h7xlMRgzueFsRgokQ9f9hcpVKttxtQE2VzIoqkXJXrpOr6uR3zv7mP4CDO9CddoFf4t0QE5DXPy8Pgjhz4irfQSEjEGUmy5yF3A5gJ9h3NYjLMgqIMqa3zcpq5E2BC3W5EbV40Dm9buQxWpZzw1lbX8Zm2kZtNIa4KyDieNjsH7IU6Yv8StELKVvT9r4eFAaXPGhwHsgaDqdNcmY116r3GC2YvsOopeiiZPhJrV0cwgOQDSkW93v7gVKDqPkXyZF1oSWa6wSAOeznMFVlVZD7ukJgeyxvWeSquNygMg0Xb2JwBVtb2M4qRQl2HN7f2KxHkoF7Soj8BSDv6iCptlbI77foGa7IBssYXRDNtUfFHNCqvnFwxoU672CExu2WEnl2bYOlk8aN020yYp4JRZsJT3GJh1m47OFOETD4lFws7FAEO9OrBBHYsEWU4hI3jjDNKSFnjwlkm9UGzVbNv7r6TGUlbwjJyexp9SMCNk0QqVt9SukwqlyQVMI7NvbZC91Yl0KTvcg4tMsB1QrXIdVFWFEopdyHKQo76gfkNYVjKMFboow8YwI4x5kgDhw4Db0dwCWHROAp61KtPA1LcLRhPggzGUQWLB2F7MNhshWawdytnXn3rsjN9PW94GWjDxhjbwb1MtgfXLmTl9YlMBRG5kaC7ktaDUbFVR1QJsT7PSoCEBOztltK4myw37MKOMGLgmuNDLWylIuBJcVA4k3c8YskYwkiRSoVOzn1Lnc9qAG1341p67NpNGcQgloJmxccCXR8IzWG6iObJYauam1VmvFENidhj3YcXixe5pSaJmbtB55RFGTLODLlmecsB6fhZP87QbSwZAOljNbm4tjBGynVVZKIbDghYR5Ng8tPbo4EmBkcO4mUY8sELmO19IUEmIQSq3DrCAD3xXX1ujpKUpZj7696crVlx4lzHlnz6sP6LidvXAU4NOc8YrpiI8tTpmxD" target="_blank" rel="nofollow sponsored" class="table-btn-deal">
+                        ⚡ AliExpress
+                    </a>
+                    <a href="https://www.amazon.com/s?k=Addiesdive+Automatic+8215+Movement+watch&tag=bestwatchdeals-20" target="_blank" rel="nofollow sponsored" class="table-btn-deal" style="background:#232f3e; border:1px solid #ff9900; color:#ffffff;">
+                        📦 Amazon
+                    </a>
+                </div>
             </td>
         </tr>
         
@@ -1853,9 +1902,14 @@ footer.store-footer {
                 <span>$136.11</span>
             </td>
             <td>
-                <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxHs6byGRCmpgsgS24GYa4TZvpwTJHIsGEOd5fjqvVC1Qe2ceDTdJnaARiZilBuNWekq96bHKKzp8gHwRE0kEwWeL8mzIrlO8RajYoovMS5Ut4oOT50AcweZVW9c4wqgnSnwCa3vrUlODCk7FS4zGJJgtU7BaW7KSxVqY4ZTyMFBnJire7txKxCQ9QZr5BhqRcZ49HYW5Btf6QBZZjgai08rTqQzjBX6KNKR4pvVUm9q8nzZo8Yj64jrCIzGWtawvpocUvYhVWG7u3uKSqj5Pc4CVlxohnI29m2TvMmzZzYUmproDusPjTTBWz4Iu46t4VHndR6BSC2eMfdp7fbMANRzBPDZd5FhSvC0zeGei8FaJfpnYcv5cgINVxesICAtJjj5rM75qjky83go7yMMWMx0QqFDK2ApkDxp3YGy66az8PIUs08O0pDbKLPkcyYK9vk8OUIPttEuKj1y4zWMW1VYus4sQnxWSqiRg0e8U5zT8mwRowK0APKC2clKryea9YV7G5nyGPRWWYL2hqMJRlCuXxE3Dg9itgO2HILEZHC7GNo8JW68RjK6pI9OkCBPj7hIarmyZ3sOaealsQ0fwe7unouZAbnjmo6R4CsyeUr4ytGJVXVsyeeaTeTyed2u0FJsfk1x0vcpQZF6lOeClXbMX" target="_blank" rel="nofollow sponsored" class="table-btn-deal">
-                    ⚡ Check Deal
-                </a>
+                <div style="display:flex; flex-direction:column; gap:0.35rem;">
+                    <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxHs6byGRCmpgsgS24GYa4TZvpwTJHIsGEOd5fjqvVC1Qe2ceDTdJnaARiZilBuNWekq96bHKKzp8gHwRE0kEwWeL8mzIrlO8RajYoovMS5Ut4oOT50AcweZVW9c4wqgnSnwCa3vrUlODCk7FS4zGJJgtU7BaW7KSxVqY4ZTyMFBnJire7txKxCQ9QZr5BhqRcZ49HYW5Btf6QBZZjgai08rTqQzjBX6KNKR4pvVUm9q8nzZo8Yj64jrCIzGWtawvpocUvYhVWG7u3uKSqj5Pc4CVlxohnI29m2TvMmzZzYUmproDusPjTTBWz4Iu46t4VHndR6BSC2eMfdp7fbMANRzBPDZd5FhSvC0zeGei8FaJfpnYcv5cgINVxesICAtJjj5rM75qjky83go7yMMWMx0QqFDK2ApkDxp3YGy66az8PIUs08O0pDbKLPkcyYK9vk8OUIPttEuKj1y4zWMW1VYus4sQnxWSqiRg0e8U5zT8mwRowK0APKC2clKryea9YV7G5nyGPRWWYL2hqMJRlCuXxE3Dg9itgO2HILEZHC7GNo8JW68RjK6pI9OkCBPj7hIarmyZ3sOaealsQ0fwe7unouZAbnjmo6R4CsyeUr4ytGJVXVsyeeaTeTyed2u0FJsfk1x0vcpQZF6lOeClXbMX" target="_blank" rel="nofollow sponsored" class="table-btn-deal">
+                        ⚡ AliExpress
+                    </a>
+                    <a href="https://www.amazon.com/s?k=Tandorio+39mm+20BAR+Dive+watch&tag=bestwatchdeals-20" target="_blank" rel="nofollow sponsored" class="table-btn-deal" style="background:#232f3e; border:1px solid #ff9900; color:#ffffff;">
+                        📦 Amazon
+                    </a>
+                </div>
             </td>
         </tr>
         
@@ -1882,9 +1936,14 @@ footer.store-footer {
                 <span>$544.00</span>
             </td>
             <td>
-                <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxhoBa063TAUHcMiR3vNBCKqtuBgDBFbJlU1HW3sXgry4ktTdUj6dN9qgG4QbT3myQutdyaP2MXojqcsTWnpP0T66CQia9PAXz4EPVjzzK6RBOOrbB5StkBjsCQ8ALGAqkpbII5o3bLLei3aUCTwgbxIlnHX2aXXIKYfplHq9fyPXLU4kSiJ8BEn4mtOfNn2sJAZ8v7Vlf0liDQhs5G8ugZppFnC2jkbVXxqHEsMFRXskGaH7uteDynxpkZkV77PdrY0tFFGfrMpFiE6IolyQ3ZOhpxeZnnyoLprfGC9RNjoioMmefZgph0zIDXlbiQ7QAs7rDx9vk5vcGgISScaLKpUXryRWdOIqa9lgUuf9Uk9NPzwTukMoPpKz2PXpplCtrFj8RFL7YkU6Ud4ecPub01KJc7h02hRcu2AzrLVc6LvcQNRwipZiaMG1TVFyIxWjmM0yLWDmbp7L72uU2G2MKysViZO5VDkUG1wS8lbhVvobC9630aql62pJMl5OikzoZ8TrbjPRnm2gFf7zonRxR7m1J4MxvskKns1cvf7hN4kiZHSTw4WMM7sOBXDTGEfRpR2ca89ZMwowpqKiAC3YFtO58pxhv1Vxq6kswNl6XU5iRmEUVOnehUQuDJaKCCEVSi5iv9KIBuUOs1uZF2ARuxTz" target="_blank" rel="nofollow sponsored" class="table-btn-deal">
-                    ⚡ Check Deal
-                </a>
+                <div style="display:flex; flex-direction:column; gap:0.35rem;">
+                    <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxhoBa063TAUHcMiR3vNBCKqtuBgDBFbJlU1HW3sXgry4ktTdUj6dN9qgG4QbT3myQutdyaP2MXojqcsTWnpP0T66CQia9PAXz4EPVjzzK6RBOOrbB5StkBjsCQ8ALGAqkpbII5o3bLLei3aUCTwgbxIlnHX2aXXIKYfplHq9fyPXLU4kSiJ8BEn4mtOfNn2sJAZ8v7Vlf0liDQhs5G8ugZppFnC2jkbVXxqHEsMFRXskGaH7uteDynxpkZkV77PdrY0tFFGfrMpFiE6IolyQ3ZOhpxeZnnyoLprfGC9RNjoioMmefZgph0zIDXlbiQ7QAs7rDx9vk5vcGgISScaLKpUXryRWdOIqa9lgUuf9Uk9NPzwTukMoPpKz2PXpplCtrFj8RFL7YkU6Ud4ecPub01KJc7h02hRcu2AzrLVc6LvcQNRwipZiaMG1TVFyIxWjmM0yLWDmbp7L72uU2G2MKysViZO5VDkUG1wS8lbhVvobC9630aql62pJMl5OikzoZ8TrbjPRnm2gFf7zonRxR7m1J4MxvskKns1cvf7hN4kiZHSTw4WMM7sOBXDTGEfRpR2ca89ZMwowpqKiAC3YFtO58pxhv1Vxq6kswNl6XU5iRmEUVOnehUQuDJaKCCEVSi5iv9KIBuUOs1uZF2ARuxTz" target="_blank" rel="nofollow sponsored" class="table-btn-deal">
+                        ⚡ AliExpress
+                    </a>
+                    <a href="https://www.amazon.com/s?k=San+Martin+Upgraded+41mm+Waterproof+watch&tag=bestwatchdeals-20" target="_blank" rel="nofollow sponsored" class="table-btn-deal" style="background:#232f3e; border:1px solid #ff9900; color:#ffffff;">
+                        📦 Amazon
+                    </a>
+                </div>
             </td>
         </tr>
         
@@ -1911,9 +1970,14 @@ footer.store-footer {
                 <span>$398.00</span>
             </td>
             <td>
-                <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3xpjK0z5F4tXx7la8qLVQd4zJbXyg9dAlis6BFkvNfyfD25nK4Hhg9XmfgfHobn3yo4a5OTyJvbPTKizCP5KkojQNc8WpCwLi5Fb5BtpUL4EzaG70jDovM5MruUAtC27ZZL0Y09UnS5a2TF82JcnFiX15k9xPPV8xRsNW68iAfPYwsVnReXGXtsGzaUxZLmkMRm6Y5DARXNofogl7WNJYcPs4vO2FSLn0dmjKk6OJHcfvWTAKylUR9DlnomK74hS7oczs5v62hj5BoW3P5bVSnSxQONfmiciUUGparoVnwEq1AjppjAXFbrfMyU5OHmfd8b8HADRkh8YgWg6q5DS4nCor3AtqrlJx9Urq9SHFHxfoDbKtPwL8njFU3YiHvzCmDUa79NjebIq2iSGNfsKNpUASPEj5mrEs0RV22kuRdpwijqdUiLmaPyXq7GJpXBpkJ2Bgn6OcIHAV5IcIT7U1VVeeVuKM0OctJxUuOzxQfC6apozarzX18ssjkiXJP4VyIF6gjG8mVqlDIAmEjJEODquGXDLMeSeNN6nvFWNmQtBdz6tWGZNX3s9z7BxIys5VOWflrwB3TpLn0fYJqmkYHFH48oJ3naGtrAjuS83w2JFo762yhCeJ3lxupwz9Vt8FEoLYyu98zQE9XHZCVWhvPnOj71nqSxBW0yJ79RYCpzWGvd2nzLbUJ" target="_blank" rel="nofollow sponsored" class="table-btn-deal">
-                    ⚡ Check Deal
-                </a>
+                <div style="display:flex; flex-direction:column; gap:0.35rem;">
+                    <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3xpjK0z5F4tXx7la8qLVQd4zJbXyg9dAlis6BFkvNfyfD25nK4Hhg9XmfgfHobn3yo4a5OTyJvbPTKizCP5KkojQNc8WpCwLi5Fb5BtpUL4EzaG70jDovM5MruUAtC27ZZL0Y09UnS5a2TF82JcnFiX15k9xPPV8xRsNW68iAfPYwsVnReXGXtsGzaUxZLmkMRm6Y5DARXNofogl7WNJYcPs4vO2FSLn0dmjKk6OJHcfvWTAKylUR9DlnomK74hS7oczs5v62hj5BoW3P5bVSnSxQONfmiciUUGparoVnwEq1AjppjAXFbrfMyU5OHmfd8b8HADRkh8YgWg6q5DS4nCor3AtqrlJx9Urq9SHFHxfoDbKtPwL8njFU3YiHvzCmDUa79NjebIq2iSGNfsKNpUASPEj5mrEs0RV22kuRdpwijqdUiLmaPyXq7GJpXBpkJ2Bgn6OcIHAV5IcIT7U1VVeeVuKM0OctJxUuOzxQfC6apozarzX18ssjkiXJP4VyIF6gjG8mVqlDIAmEjJEODquGXDLMeSeNN6nvFWNmQtBdz6tWGZNX3s9z7BxIys5VOWflrwB3TpLn0fYJqmkYHFH48oJ3naGtrAjuS83w2JFo762yhCeJ3lxupwz9Vt8FEoLYyu98zQE9XHZCVWhvPnOj71nqSxBW0yJ79RYCpzWGvd2nzLbUJ" target="_blank" rel="nofollow sponsored" class="table-btn-deal">
+                        ⚡ AliExpress
+                    </a>
+                    <a href="https://www.amazon.com/s?k=STEELDIVE+SD1970+Arrival+Brand+watch&tag=bestwatchdeals-20" target="_blank" rel="nofollow sponsored" class="table-btn-deal" style="background:#232f3e; border:1px solid #ff9900; color:#ffffff;">
+                        📦 Amazon
+                    </a>
+                </div>
             </td>
         </tr>
         
@@ -2033,11 +2097,16 @@ footer.store-footer {
 
                     <!-- Action Buttons -->
                     <div class="card-actions-group">
-                        <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JyaEdpErFbJavsWuikS2toSWagA774eLh11QJRpHQ8D5iUjrURolTazcbmIpwNFJFW7Y8s5hs3npSYap5D7PWhpxUS2tQQJ0f5GDxgNWjZ3MMuIM44hQxdVQGesMlkDGD7VTAoUj2d32O4mmJdK9O9WTeTqve109Zkw31ghHXlTKtrVFMfPFHnJQxs5gxPVGhgeLO8osKYfmnmxxE4B2QRLmOPddSgX4KwCxEgg1RMMQDScf8EbfeAjAPg4p23RL7re8fqu13puxv3922PVG0Uf0014qVPUC1WQmXuJ2gaDET9QRNJOGLSXw32WhoiFBIXQ6x1MWubmgTdFtRdz7iCbl8RbEd6suQlGPwY6KtkyO0FCkVUdTsAm9xIftAqx5G2EdUjKnGqStjqAIYvM4pmSNQo4LfqJqM1AssUwtzP97XnbHKzMyE0QShxjEynESOGSMfmYwtYrMSfv1spwHqgo0TqtD376ftnT3SsNuQxifiIt9CedvlJmYXIuLx9drzdmX4FPoAe3PzWzpOXIfglZwywojCncp8T2w7ClaG3yyXvVSAc96nqSzPOR0tKOZq1EUT75Fiw065bBRyNOBW1b05LfUneB0KO11ldc1DVfPgUwnQlP0g9vxYYIFUZ9VOJNoPT01GKUoZyCk2wn8gEC9N" target="_blank" rel="nofollow sponsored" class="btn-cta-aliexpress">
-                            ⚡ Check Deal Price on AliExpress &rarr;
-                        </a>
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:0.5rem; width:100%; margin-bottom:0.45rem;">
+                            <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JyaEdpErFbJavsWuikS2toSWagA774eLh11QJRpHQ8D5iUjrURolTazcbmIpwNFJFW7Y8s5hs3npSYap5D7PWhpxUS2tQQJ0f5GDxgNWjZ3MMuIM44hQxdVQGesMlkDGD7VTAoUj2d32O4mmJdK9O9WTeTqve109Zkw31ghHXlTKtrVFMfPFHnJQxs5gxPVGhgeLO8osKYfmnmxxE4B2QRLmOPddSgX4KwCxEgg1RMMQDScf8EbfeAjAPg4p23RL7re8fqu13puxv3922PVG0Uf0014qVPUC1WQmXuJ2gaDET9QRNJOGLSXw32WhoiFBIXQ6x1MWubmgTdFtRdz7iCbl8RbEd6suQlGPwY6KtkyO0FCkVUdTsAm9xIftAqx5G2EdUjKnGqStjqAIYvM4pmSNQo4LfqJqM1AssUwtzP97XnbHKzMyE0QShxjEynESOGSMfmYwtYrMSfv1spwHqgo0TqtD376ftnT3SsNuQxifiIt9CedvlJmYXIuLx9drzdmX4FPoAe3PzWzpOXIfglZwywojCncp8T2w7ClaG3yyXvVSAc96nqSzPOR0tKOZq1EUT75Fiw065bBRyNOBW1b05LfUneB0KO11ldc1DVfPgUwnQlP0g9vxYYIFUZ9VOJNoPT01GKUoZyCk2wn8gEC9N" target="_blank" rel="nofollow sponsored" class="btn-cta-aliexpress">
+                                ⚡ Check AliExpress Deal ($127.36) &rarr;
+                            </a>
+                            <a href="https://www.amazon.com/s?k=STEELDIVE+SD1970+Automatic+Diver+watch&tag=bestwatchdeals-20" target="_blank" rel="nofollow sponsored" class="btn-cta-amazon">
+                                📦 Compare on Amazon Prime &rarr;
+                            </a>
+                        </div>
                         <a href="/watches/steeldive-sd1970-auto-diver-captain-willard/" class="btn-cta-review">
-                            📖 Read Full Hands-On Review
+                            📖 Read Full Hands-On Review &amp; Specs
                         </a>
                     </div>
                 </div>
@@ -2149,11 +2218,16 @@ footer.store-footer {
 
                     <!-- Action Buttons -->
                     <div class="card-actions-group">
-                        <a href="https://s.click.aliexpress.com/s/NdpwztbAIgDMmxGbP8fFks7yUFfsHjzlImSYmA68h7xlMRgzueFsRgokQ9f9hcpVKttxtQE2VzIoqkXJXrpOr6uR3zv7mP4CDO9CddoFf4t0QE5DXPy8Pgjhz4irfQSEjEGUmy5yF3A5gJ9h3NYjLMgqIMqa3zcpq5E2BC3W5EbV40Dm9buQxWpZzw1lbX8Zm2kZtNIa4KyDieNjsH7IU6Yv8StELKVvT9r4eFAaXPGhwHsgaDqdNcmY116r3GC2YvsOopeiiZPhJrV0cwgOQDSkW93v7gVKDqPkXyZF1oSWa6wSAOeznMFVlVZD7ukJgeyxvWeSquNygMg0Xb2JwBVtb2M4qRQl2HN7f2KxHkoF7Soj8BSDv6iCptlbI77foGa7IBssYXRDNtUfFHNCqvnFwxoU672CExu2WEnl2bYOlk8aN020yYp4JRZsJT3GJh1m47OFOETD4lFws7FAEO9OrBBHYsEWU4hI3jjDNKSFnjwlkm9UGzVbNv7r6TGUlbwjJyexp9SMCNk0QqVt9SukwqlyQVMI7NvbZC91Yl0KTvcg4tMsB1QrXIdVFWFEopdyHKQo76gfkNYVjKMFboow8YwI4x5kgDhw4Db0dwCWHROAp61KtPA1LcLRhPggzGUQWLB2F7MNhshWawdytnXn3rsjN9PW94GWjDxhjbwb1MtgfXLmTl9YlMBRG5kaC7ktaDUbFVR1QJsT7PSoCEBOztltK4myw37MKOMGLgmuNDLWylIuBJcVA4k3c8YskYwkiRSoVOzn1Lnc9qAG1341p67NpNGcQgloJmxccCXR8IzWG6iObJYauam1VmvFENidhj3YcXixe5pSaJmbtB55RFGTLODLlmecsB6fhZP87QbSwZAOljNbm4tjBGynVVZKIbDghYR5Ng8tPbo4EmBkcO4mUY8sELmO19IUEmIQSq3DrCAD3xXX1ujpKUpZj7696crVlx4lzHlnz6sP6LidvXAU4NOc8YrpiI8tTpmxD" target="_blank" rel="nofollow sponsored" class="btn-cta-aliexpress">
-                            ⚡ Check Deal Price on AliExpress &rarr;
-                        </a>
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:0.5rem; width:100%; margin-bottom:0.45rem;">
+                            <a href="https://s.click.aliexpress.com/s/NdpwztbAIgDMmxGbP8fFks7yUFfsHjzlImSYmA68h7xlMRgzueFsRgokQ9f9hcpVKttxtQE2VzIoqkXJXrpOr6uR3zv7mP4CDO9CddoFf4t0QE5DXPy8Pgjhz4irfQSEjEGUmy5yF3A5gJ9h3NYjLMgqIMqa3zcpq5E2BC3W5EbV40Dm9buQxWpZzw1lbX8Zm2kZtNIa4KyDieNjsH7IU6Yv8StELKVvT9r4eFAaXPGhwHsgaDqdNcmY116r3GC2YvsOopeiiZPhJrV0cwgOQDSkW93v7gVKDqPkXyZF1oSWa6wSAOeznMFVlVZD7ukJgeyxvWeSquNygMg0Xb2JwBVtb2M4qRQl2HN7f2KxHkoF7Soj8BSDv6iCptlbI77foGa7IBssYXRDNtUfFHNCqvnFwxoU672CExu2WEnl2bYOlk8aN020yYp4JRZsJT3GJh1m47OFOETD4lFws7FAEO9OrBBHYsEWU4hI3jjDNKSFnjwlkm9UGzVbNv7r6TGUlbwjJyexp9SMCNk0QqVt9SukwqlyQVMI7NvbZC91Yl0KTvcg4tMsB1QrXIdVFWFEopdyHKQo76gfkNYVjKMFboow8YwI4x5kgDhw4Db0dwCWHROAp61KtPA1LcLRhPggzGUQWLB2F7MNhshWawdytnXn3rsjN9PW94GWjDxhjbwb1MtgfXLmTl9YlMBRG5kaC7ktaDUbFVR1QJsT7PSoCEBOztltK4myw37MKOMGLgmuNDLWylIuBJcVA4k3c8YskYwkiRSoVOzn1Lnc9qAG1341p67NpNGcQgloJmxccCXR8IzWG6iObJYauam1VmvFENidhj3YcXixe5pSaJmbtB55RFGTLODLlmecsB6fhZP87QbSwZAOljNbm4tjBGynVVZKIbDghYR5Ng8tPbo4EmBkcO4mUY8sELmO19IUEmIQSq3DrCAD3xXX1ujpKUpZj7696crVlx4lzHlnz6sP6LidvXAU4NOc8YrpiI8tTpmxD" target="_blank" rel="nofollow sponsored" class="btn-cta-aliexpress">
+                                ⚡ Check AliExpress Deal ($112.94) &rarr;
+                            </a>
+                            <a href="https://www.amazon.com/s?k=Addiesdive+Automatic+8215+Movement+watch&tag=bestwatchdeals-20" target="_blank" rel="nofollow sponsored" class="btn-cta-amazon">
+                                📦 Compare on Amazon Prime &rarr;
+                            </a>
+                        </div>
                         <a href="/watches/addiesdive-men-luxury-auto-8215-movement/" class="btn-cta-review">
-                            📖 Read Full Hands-On Review
+                            📖 Read Full Hands-On Review &amp; Specs
                         </a>
                     </div>
                 </div>
@@ -2265,11 +2339,16 @@ footer.store-footer {
 
                     <!-- Action Buttons -->
                     <div class="card-actions-group">
-                        <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxHs6byGRCmpgsgS24GYa4TZvpwTJHIsGEOd5fjqvVC1Qe2ceDTdJnaARiZilBuNWekq96bHKKzp8gHwRE0kEwWeL8mzIrlO8RajYoovMS5Ut4oOT50AcweZVW9c4wqgnSnwCa3vrUlODCk7FS4zGJJgtU7BaW7KSxVqY4ZTyMFBnJire7txKxCQ9QZr5BhqRcZ49HYW5Btf6QBZZjgai08rTqQzjBX6KNKR4pvVUm9q8nzZo8Yj64jrCIzGWtawvpocUvYhVWG7u3uKSqj5Pc4CVlxohnI29m2TvMmzZzYUmproDusPjTTBWz4Iu46t4VHndR6BSC2eMfdp7fbMANRzBPDZd5FhSvC0zeGei8FaJfpnYcv5cgINVxesICAtJjj5rM75qjky83go7yMMWMx0QqFDK2ApkDxp3YGy66az8PIUs08O0pDbKLPkcyYK9vk8OUIPttEuKj1y4zWMW1VYus4sQnxWSqiRg0e8U5zT8mwRowK0APKC2clKryea9YV7G5nyGPRWWYL2hqMJRlCuXxE3Dg9itgO2HILEZHC7GNo8JW68RjK6pI9OkCBPj7hIarmyZ3sOaealsQ0fwe7unouZAbnjmo6R4CsyeUr4ytGJVXVsyeeaTeTyed2u0FJsfk1x0vcpQZF6lOeClXbMX" target="_blank" rel="nofollow sponsored" class="btn-cta-aliexpress">
-                            ⚡ Check Deal Price on AliExpress &rarr;
-                        </a>
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:0.5rem; width:100%; margin-bottom:0.45rem;">
+                            <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxHs6byGRCmpgsgS24GYa4TZvpwTJHIsGEOd5fjqvVC1Qe2ceDTdJnaARiZilBuNWekq96bHKKzp8gHwRE0kEwWeL8mzIrlO8RajYoovMS5Ut4oOT50AcweZVW9c4wqgnSnwCa3vrUlODCk7FS4zGJJgtU7BaW7KSxVqY4ZTyMFBnJire7txKxCQ9QZr5BhqRcZ49HYW5Btf6QBZZjgai08rTqQzjBX6KNKR4pvVUm9q8nzZo8Yj64jrCIzGWtawvpocUvYhVWG7u3uKSqj5Pc4CVlxohnI29m2TvMmzZzYUmproDusPjTTBWz4Iu46t4VHndR6BSC2eMfdp7fbMANRzBPDZd5FhSvC0zeGei8FaJfpnYcv5cgINVxesICAtJjj5rM75qjky83go7yMMWMx0QqFDK2ApkDxp3YGy66az8PIUs08O0pDbKLPkcyYK9vk8OUIPttEuKj1y4zWMW1VYus4sQnxWSqiRg0e8U5zT8mwRowK0APKC2clKryea9YV7G5nyGPRWWYL2hqMJRlCuXxE3Dg9itgO2HILEZHC7GNo8JW68RjK6pI9OkCBPj7hIarmyZ3sOaealsQ0fwe7unouZAbnjmo6R4CsyeUr4ytGJVXVsyeeaTeTyed2u0FJsfk1x0vcpQZF6lOeClXbMX" target="_blank" rel="nofollow sponsored" class="btn-cta-aliexpress">
+                                ⚡ Check AliExpress Deal ($68.06) &rarr;
+                            </a>
+                            <a href="https://www.amazon.com/s?k=Tandorio+39mm+20BAR+Dive+watch&tag=bestwatchdeals-20" target="_blank" rel="nofollow sponsored" class="btn-cta-amazon">
+                                📦 Compare on Amazon Prime &rarr;
+                            </a>
+                        </div>
                         <a href="/watches/tandorio-39mm-20bar-dive-pilot-men/" class="btn-cta-review">
-                            📖 Read Full Hands-On Review
+                            📖 Read Full Hands-On Review &amp; Specs
                         </a>
                     </div>
                 </div>
@@ -2381,11 +2460,16 @@ footer.store-footer {
 
                     <!-- Action Buttons -->
                     <div class="card-actions-group">
-                        <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxhoBa063TAUHcMiR3vNBCKqtuBgDBFbJlU1HW3sXgry4ktTdUj6dN9qgG4QbT3myQutdyaP2MXojqcsTWnpP0T66CQia9PAXz4EPVjzzK6RBOOrbB5StkBjsCQ8ALGAqkpbII5o3bLLei3aUCTwgbxIlnHX2aXXIKYfplHq9fyPXLU4kSiJ8BEn4mtOfNn2sJAZ8v7Vlf0liDQhs5G8ugZppFnC2jkbVXxqHEsMFRXskGaH7uteDynxpkZkV77PdrY0tFFGfrMpFiE6IolyQ3ZOhpxeZnnyoLprfGC9RNjoioMmefZgph0zIDXlbiQ7QAs7rDx9vk5vcGgISScaLKpUXryRWdOIqa9lgUuf9Uk9NPzwTukMoPpKz2PXpplCtrFj8RFL7YkU6Ud4ecPub01KJc7h02hRcu2AzrLVc6LvcQNRwipZiaMG1TVFyIxWjmM0yLWDmbp7L72uU2G2MKysViZO5VDkUG1wS8lbhVvobC9630aql62pJMl5OikzoZ8TrbjPRnm2gFf7zonRxR7m1J4MxvskKns1cvf7hN4kiZHSTw4WMM7sOBXDTGEfRpR2ca89ZMwowpqKiAC3YFtO58pxhv1Vxq6kswNl6XU5iRmEUVOnehUQuDJaKCCEVSi5iv9KIBuUOs1uZF2ARuxTz" target="_blank" rel="nofollow sponsored" class="btn-cta-aliexpress">
-                            ⚡ Check Deal Price on AliExpress &rarr;
-                        </a>
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:0.5rem; width:100%; margin-bottom:0.45rem;">
+                            <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxhoBa063TAUHcMiR3vNBCKqtuBgDBFbJlU1HW3sXgry4ktTdUj6dN9qgG4QbT3myQutdyaP2MXojqcsTWnpP0T66CQia9PAXz4EPVjzzK6RBOOrbB5StkBjsCQ8ALGAqkpbII5o3bLLei3aUCTwgbxIlnHX2aXXIKYfplHq9fyPXLU4kSiJ8BEn4mtOfNn2sJAZ8v7Vlf0liDQhs5G8ugZppFnC2jkbVXxqHEsMFRXskGaH7uteDynxpkZkV77PdrY0tFFGfrMpFiE6IolyQ3ZOhpxeZnnyoLprfGC9RNjoioMmefZgph0zIDXlbiQ7QAs7rDx9vk5vcGgISScaLKpUXryRWdOIqa9lgUuf9Uk9NPzwTukMoPpKz2PXpplCtrFj8RFL7YkU6Ud4ecPub01KJc7h02hRcu2AzrLVc6LvcQNRwipZiaMG1TVFyIxWjmM0yLWDmbp7L72uU2G2MKysViZO5VDkUG1wS8lbhVvobC9630aql62pJMl5OikzoZ8TrbjPRnm2gFf7zonRxR7m1J4MxvskKns1cvf7hN4kiZHSTw4WMM7sOBXDTGEfRpR2ca89ZMwowpqKiAC3YFtO58pxhv1Vxq6kswNl6XU5iRmEUVOnehUQuDJaKCCEVSi5iv9KIBuUOs1uZF2ARuxTz" target="_blank" rel="nofollow sponsored" class="btn-cta-aliexpress">
+                                ⚡ Check AliExpress Deal ($369.38) &rarr;
+                            </a>
+                            <a href="https://www.amazon.com/s?k=San+Martin+Upgraded+41mm+Waterproof+watch&tag=bestwatchdeals-20" target="_blank" rel="nofollow sponsored" class="btn-cta-amazon">
+                                📦 Compare on Amazon Prime &rarr;
+                            </a>
+                        </div>
                         <a href="/watches/san-martin-upgraded-41mm-600m-classic-men/" class="btn-cta-review">
-                            📖 Read Full Hands-On Review
+                            📖 Read Full Hands-On Review &amp; Specs
                         </a>
                     </div>
                 </div>
@@ -2497,11 +2581,16 @@ footer.store-footer {
 
                     <!-- Action Buttons -->
                     <div class="card-actions-group">
-                        <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3xpjK0z5F4tXx7la8qLVQd4zJbXyg9dAlis6BFkvNfyfD25nK4Hhg9XmfgfHobn3yo4a5OTyJvbPTKizCP5KkojQNc8WpCwLi5Fb5BtpUL4EzaG70jDovM5MruUAtC27ZZL0Y09UnS5a2TF82JcnFiX15k9xPPV8xRsNW68iAfPYwsVnReXGXtsGzaUxZLmkMRm6Y5DARXNofogl7WNJYcPs4vO2FSLn0dmjKk6OJHcfvWTAKylUR9DlnomK74hS7oczs5v62hj5BoW3P5bVSnSxQONfmiciUUGparoVnwEq1AjppjAXFbrfMyU5OHmfd8b8HADRkh8YgWg6q5DS4nCor3AtqrlJx9Urq9SHFHxfoDbKtPwL8njFU3YiHvzCmDUa79NjebIq2iSGNfsKNpUASPEj5mrEs0RV22kuRdpwijqdUiLmaPyXq7GJpXBpkJ2Bgn6OcIHAV5IcIT7U1VVeeVuKM0OctJxUuOzxQfC6apozarzX18ssjkiXJP4VyIF6gjG8mVqlDIAmEjJEODquGXDLMeSeNN6nvFWNmQtBdz6tWGZNX3s9z7BxIys5VOWflrwB3TpLn0fYJqmkYHFH48oJ3naGtrAjuS83w2JFo762yhCeJ3lxupwz9Vt8FEoLYyu98zQE9XHZCVWhvPnOj71nqSxBW0yJ79RYCpzWGvd2nzLbUJ" target="_blank" rel="nofollow sponsored" class="btn-cta-aliexpress">
-                            ⚡ Check Deal Price on AliExpress &rarr;
-                        </a>
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:0.5rem; width:100%; margin-bottom:0.45rem;">
+                            <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3xpjK0z5F4tXx7la8qLVQd4zJbXyg9dAlis6BFkvNfyfD25nK4Hhg9XmfgfHobn3yo4a5OTyJvbPTKizCP5KkojQNc8WpCwLi5Fb5BtpUL4EzaG70jDovM5MruUAtC27ZZL0Y09UnS5a2TF82JcnFiX15k9xPPV8xRsNW68iAfPYwsVnReXGXtsGzaUxZLmkMRm6Y5DARXNofogl7WNJYcPs4vO2FSLn0dmjKk6OJHcfvWTAKylUR9DlnomK74hS7oczs5v62hj5BoW3P5bVSnSxQONfmiciUUGparoVnwEq1AjppjAXFbrfMyU5OHmfd8b8HADRkh8YgWg6q5DS4nCor3AtqrlJx9Urq9SHFHxfoDbKtPwL8njFU3YiHvzCmDUa79NjebIq2iSGNfsKNpUASPEj5mrEs0RV22kuRdpwijqdUiLmaPyXq7GJpXBpkJ2Bgn6OcIHAV5IcIT7U1VVeeVuKM0OctJxUuOzxQfC6apozarzX18ssjkiXJP4VyIF6gjG8mVqlDIAmEjJEODquGXDLMeSeNN6nvFWNmQtBdz6tWGZNX3s9z7BxIys5VOWflrwB3TpLn0fYJqmkYHFH48oJ3naGtrAjuS83w2JFo762yhCeJ3lxupwz9Vt8FEoLYyu98zQE9XHZCVWhvPnOj71nqSxBW0yJ79RYCpzWGvd2nzLbUJ" target="_blank" rel="nofollow sponsored" class="btn-cta-aliexpress">
+                                ⚡ Check AliExpress Deal ($127.36) &rarr;
+                            </a>
+                            <a href="https://www.amazon.com/s?k=STEELDIVE+SD1970+Arrival+Brand+watch&tag=bestwatchdeals-20" target="_blank" rel="nofollow sponsored" class="btn-cta-amazon">
+                                📦 Compare on Amazon Prime &rarr;
+                            </a>
+                        </div>
                         <a href="/watches/steeldive-sd1970-arrival-20atm-water-resistant/" class="btn-cta-review">
-                            📖 Read Full Hands-On Review
+                            📖 Read Full Hands-On Review &amp; Specs
                         </a>
                     </div>
                 </div>
@@ -2597,14 +2686,14 @@ footer.store-footer {
                     <li><a href="/sitemap.xml">XML Product Sitemap</a></li>
                 </ul>
                 <p style="font-size: 0.72rem; color: #64748b; margin-top: 1.25rem; line-height: 1.5;">
-                    BestWatchDeals.com is reader-supported. When you purchase through links on our site, we may earn an affiliate commission from verified merchants at no additional cost to you.
+                    BestWatchDeals.com is reader-supported. When you purchase through links on our site, we may earn an affiliate commission from verified merchants at no additional cost to you. As an Amazon Associate I earn from qualifying purchases.
                 </p>
             </div>
         </div>
 
         <div class="footer-bottom-row">
             <div>&copy; 2012-2026 BestWatchDeals.com. All global rights reserved.</div>
-            <div>Prices, coupons, and AliExpress Choice Day inventory subject to supplier change.</div>
+            <div>Prices, coupons, AliExpress and Amazon Prime inventory subject to supplier change.</div>
         </div>
     </footer>
 
