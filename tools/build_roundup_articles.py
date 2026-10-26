@@ -1892,6 +1892,7 @@ def generate_roundup_html(article, manifest_reviews_dict):
             "@type": "Product",
             "name": "{html.escape(clean_prod_name)}",
             "image": "{it['main_image']}",
+            "description": "Comprehensive review, verified specifications, and live promotional deal for {html.escape(clean_prod_name)} ({html.escape(it['brand'])}).",
             "brand": {{
               "@type": "Brand",
               "name": "{html.escape(it['brand'])}"
@@ -1901,7 +1902,45 @@ def generate_roundup_html(article, manifest_reviews_dict):
               "url": "{it['pdp_url']}",
               "priceCurrency": "USD",
               "price": "{it['sale_price']}",
-              "availability": "https://schema.org/InStock"
+              "priceValidUntil": "2027-12-31",
+              "validFrom": "2026-01-01",
+              "itemCondition": "https://schema.org/NewCondition",
+              "availability": "https://schema.org/InStock",
+              "shippingDetails": {{
+                "@type": "OfferShippingDetails",
+                "shippingRate": {{
+                  "@type": "MonetaryAmount",
+                  "value": "0.00",
+                  "currency": "USD"
+                }},
+                "shippingDestination": {{
+                  "@type": "DefinedRegion",
+                  "addressCountry": "US"
+                }},
+                "deliveryTime": {{
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {{
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "d"
+                  }},
+                  "transitTime": {{
+                    "@type": "QuantitativeValue",
+                    "minValue": 3,
+                    "maxValue": 7,
+                    "unitCode": "d"
+                  }}
+                }}
+              }},
+              "hasMerchantReturnPolicy": {{
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "US",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                "merchantReturnDays": 15,
+                "returnMethod": "https://schema.org/ReturnByMail",
+                "returnFees": "https://schema.org/FreeReturn"
+              }}
             }},
             "aggregateRating": {{
               "@type": "AggregateRating",

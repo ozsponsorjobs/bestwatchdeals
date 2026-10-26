@@ -229,10 +229,10 @@ def clean_megastore_pdp(item):
       "@type": "Product",
       "name": "{html.escape(title)}",
       "image": "{product_img_for_schema}",
-      "description": "2026 collector review, authentic specifications, and verified deal pricing for {brand}.",
+      "description": "2026 collector review, authentic specifications, and verified deal pricing for {html.escape(brand)}.",
       "brand": {{
         "@type": "Brand",
-        "name": "{brand}"
+        "name": "{html.escape(brand)}"
       }},
       "offers": {{
         "@type": "Offer",
@@ -240,8 +240,44 @@ def clean_megastore_pdp(item):
         "priceCurrency": "USD",
         "price": "{price_val}",
         "priceValidUntil": "2027-12-31",
+        "validFrom": "2026-01-01",
         "itemCondition": "https://schema.org/NewCondition",
-        "availability": "https://schema.org/InStock"
+        "availability": "https://schema.org/InStock",
+        "shippingDetails": {{
+          "@type": "OfferShippingDetails",
+          "shippingRate": {{
+            "@type": "MonetaryAmount",
+            "value": "0.00",
+            "currency": "USD"
+          }},
+          "shippingDestination": {{
+            "@type": "DefinedRegion",
+            "addressCountry": "US"
+          }},
+          "deliveryTime": {{
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {{
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "d"
+            }},
+            "transitTime": {{
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "d"
+            }}
+          }}
+        }},
+        "hasMerchantReturnPolicy": {{
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 15,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }}
       }},
       "review": {{
         "@type": "Review",
