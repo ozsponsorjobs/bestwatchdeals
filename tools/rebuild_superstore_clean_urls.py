@@ -1003,6 +1003,7 @@ def main():
         '/robots.txt', '/robots.txt/', '/sitemap.xml', '/sitemap.xml/',
         '/llms.txt', '/llms.txt/', '/llms-full.txt', '/llms-full.txt/',
         '/feed.xml', '/pinterest-feed.xml', '/rss.xml',
+        '/ads.txt', '/ads.txt/',
         '/articles/top-5-best-rolex-submariner-alternatives/', '/articles/top-5-best-rolex-submariner-alternatives',
         '/articles/top-5-affordable-omega-speedmaster-alternatives/', '/articles/top-5-affordable-omega-speedmaster-alternatives',
         '/articles/top-5-best-rolex-gmt-master-ii-alternatives/', '/articles/top-5-best-rolex-gmt-master-ii-alternatives',
@@ -1017,6 +1018,9 @@ def main():
         redirect_lines.append(f"{p_from} {p_to} 301")
         if p_from.endswith('/'):
             redirect_lines.append(f"{p_from.rstrip('/')} {p_to} 301")
+
+    # Ezoic Ads.txt Manager 301 Redirect (Official Server Redirect Method)
+    redirect_lines.insert(0, "/ads.txt https://srv.adstxtmanager.com/19390/bestwatchdeals.com 301")
             
     with open(os.path.join(DIST_DIR, "_redirects"), 'w', encoding='utf-8') as f:
         f.write("\n".join(redirect_lines) + "\n")
