@@ -459,6 +459,16 @@ def render_layout(title, description, canonical_url, body_html, schema_ld="", og
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Ezoic Privacy & Integration Scripts -->
+    <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+    <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+    <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+    <script>
+        window.ezstandalone = window.ezstandalone || {{}};
+        ezstandalone.cmd = ezstandalone.cmd || [];
+    </script>
+    <script src="//ezoicanalytics.com/analytics.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{html.escape(title)}</title>
@@ -564,6 +574,13 @@ def render_layout(title, description, canonical_url, body_html, schema_ld="", og
             &copy; 2012-2026 BestWatchDeals.com. All rights reserved. Prices, specs, and promotions subject to distributor change.
         </div>
     </footer>
+
+    <!-- Ezoic Ad Standalone Execution -->
+    <script>
+        ezstandalone.cmd.push(function () {{
+            ezstandalone.showAds({{}});
+        }});
+    </script>
 
 </body>
 </html>"""
