@@ -455,6 +455,24 @@ def clean_megastore_pdp(item):
             </a>
         </div>
     </div>
+
+    <!-- Mobile Sticky Conversion Floating Bar (High Conversion) -->
+    <div class="pdp-sticky-bar">
+        <div class="sticky-bar-inner">
+            <div class="sticky-price-col">
+                <span class="sticky-lbl">Verified Deal</span>
+                <span class="sticky-price">{deal_p}</span>
+            </div>
+            <div class="sticky-btn-col">
+                <a href="{promo_link}" target="_blank" rel="nofollow sponsored" class="btn-sticky-ae">
+                    ⚡ AliExpress
+                </a>
+                <a href="https://www.amazon.com/s?k={amazon_query}&tag=bestwatchdeals-20" target="_blank" rel="nofollow sponsored" class="btn-sticky-amz">
+                    📦 Amazon Prime
+                </a>
+            </div>
+        </div>
+    </div>
     """
 
     return render_megastore_layout(
@@ -974,9 +992,23 @@ def main():
             f.write(html_out)
         sitemap_entries.append(h['url'])
 
-    # 4. Compile Legal Pages
-    print("⚖️ Compiling Legal Pages...")
-    for l in legals:
+    # 4. Compile Legal & Trust Pages
+    print("⚖️ Compiling Legal & Trust Pages...")
+    trust_pages = [
+        {
+            "path": "/about/",
+            "url": "https://bestwatchdeals.com/about/",
+            "title": "About BestWatchDeals | Independent Horology Reviews & Benchmarks",
+            "type": "about"
+        },
+        {
+            "path": "/contact/",
+            "url": "https://bestwatchdeals.com/contact/",
+            "title": "Contact Our Editorial Board & Support | BestWatchDeals",
+            "type": "contact"
+        }
+    ]
+    for l in legals + trust_pages:
         html_out = build_legal_page(l)
         clean_path = l['path'].strip('/')
         target_dir = os.path.join(DIST_DIR, clean_path)
@@ -1004,6 +1036,8 @@ def main():
         '/llms.txt', '/llms.txt/', '/llms-full.txt', '/llms-full.txt/',
         '/feed.xml', '/pinterest-feed.xml', '/rss.xml',
         '/ads.txt', '/ads.txt/',
+        '/about/', '/about', '/contact/', '/contact',
+        '/privacy-policy/', '/privacy-policy', '/terms-of-use/', '/terms-of-use',
         '/articles/top-5-best-rolex-submariner-alternatives/', '/articles/top-5-best-rolex-submariner-alternatives',
         '/articles/top-5-affordable-omega-speedmaster-alternatives/', '/articles/top-5-affordable-omega-speedmaster-alternatives',
         '/articles/top-5-best-rolex-gmt-master-ii-alternatives/', '/articles/top-5-best-rolex-gmt-master-ii-alternatives',

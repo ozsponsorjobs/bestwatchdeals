@@ -873,6 +873,78 @@ footer.store-footer {
   .hero-headline { font-size: 1.65rem; }
   .pdp-main-price { font-size: 1.75rem; }
 }
+
+/* Mobile Sticky Deal Floating Bar (High Conversion) */
+.pdp-sticky-bar {
+  display: none;
+}
+@media (max-width: 768px) {
+  .pdp-sticky-bar {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.96);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0.5rem 0.85rem;
+    z-index: 9999;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.25);
+  }
+  .sticky-bar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .sticky-price-col {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+  .sticky-lbl {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #94a3b8;
+  }
+  .sticky-price {
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: #38bdf8;
+  }
+  .sticky-btn-col {
+    display: flex;
+    gap: 0.4rem;
+    flex: 1;
+    justify-content: flex-end;
+  }
+  .btn-sticky-ae {
+    background: #ea580c;
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+  .btn-sticky-amz {
+    background: #f59e0b;
+    color: #0f172a;
+    font-size: 0.78rem;
+    font-weight: 800;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+}
 </style>
     
     <script type="application/ld+json">
@@ -980,6 +1052,8 @@ footer.store-footer {
                 ⚡ <strong>OCTOBER 2026 SUPERSTORE DEALS:</strong> Up to 75% Off Automatic NH35 Divers &amp; Choice Day Flash Sales
             </div>
             <div class="util-links">
+                <a href="/about/" style="color:#cbd5e1; font-weight:600; text-decoration:none;">📖 About Us</a>
+                <a href="/contact/" style="color:#cbd5e1; font-weight:600; text-decoration:none;">✉️ Contact</a>
                 <span>🛡️ 100% Verified Deals</span>
                 <span>🚚 Global Express Tracking</span>
                 <span class="currency-select">USD ($)</span>
@@ -1162,6 +1236,24 @@ footer.store-footer {
             </a>
         </div>
     </div>
+
+    <!-- Mobile Sticky Conversion Floating Bar (High Conversion) -->
+    <div class="pdp-sticky-bar">
+        <div class="sticky-bar-inner">
+            <div class="sticky-price-col">
+                <span class="sticky-lbl">Verified Deal</span>
+                <span class="sticky-price">$38.02</span>
+            </div>
+            <div class="sticky-btn-col">
+                <a href="https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0Jxw27WaBQOI0YLlRB35hYFDZCD8PJiclPvY3kUjer13EMe7olcEwriHx8LzhQsroR0PtPyPel9abEu4nUGG3Mj5ClArRfVMvxh13YpArjDis4yYDymrAqMG8tVelInPMea7RAOrfGuw6RRgMfWuIYMbX4MNVyiwEfM1h92URY15XmRUlSnBHdnzRzYhvQj3VzzP3sonH9CF2AE23JYN76NSge053sQNXU7UKAps0D2QeTqyubKjdJEdnFk1apqI42LhtcSQpEbte13OEke0wF15rJKy3Bmocy8vEO3qAdfqVJLsn1X6Xi9iSU77oxNbPbHDylkCrYiqmVM8vYZXkl28v3r4N5CLAVVEQaTCMGnvYTGx0GNQQSAUfPibSb9L81eyh2Pyqf51FvOmXlUsiWsotqVQHq8OyENrXojBvmbb3c70kzH3qTV9PwlgEFTK12uEcxOeoFxY2SS4tIkK3xiisc5ROnF0urxVG8GYU3ODq9Ps5Gevh7oMB2gRVHVwv5F7JiEWWM4URi0jt7w1kwqCApGLAtxV7dtPHakUE9WGLg11qIna8AKSNvly3MDmB0mN2uiewxbjAeXCtqupzKl4HKXXOKCFUApOy63BQym2Qzt49FfgJtpN45ZYSlUZJ44OOb5RXiG2lOa4Ee0KJhNfyB" target="_blank" rel="nofollow sponsored" class="btn-sticky-ae">
+                    ⚡ AliExpress
+                </a>
+                <a href="https://www.amazon.com/s?k=OBLVLO+watches&tag=bestwatchdeals-20" target="_blank" rel="nofollow sponsored" class="btn-sticky-amz">
+                    📦 Amazon Prime
+                </a>
+            </div>
+        </div>
+    </div>
     
     </main>
 
@@ -1207,6 +1299,8 @@ footer.store-footer {
             <div class="footer-col">
                 <h4>Customer Trust &amp; Legal</h4>
                 <ul>
+                    <li><a href="/about/">About Our Publication &amp; Lab</a></li>
+                    <li><a href="/contact/">Contact Editorial Team</a></li>
                     <li><a href="/privacy-policy/">Privacy Policy (GDPR / CCPA)</a></li>
                     <li><a href="/terms-of-use/">Terms of Use &amp; Affiliate Disclosure</a></li>
                     <li><a href="/sitemap.xml">XML Product Sitemap</a></li>

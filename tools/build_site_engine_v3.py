@@ -559,10 +559,12 @@ def render_layout(title, description, canonical_url, body_html, schema_ld="", og
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Legal & Transparency</h4>
+                <h4>Legal &amp; Transparency</h4>
                 <ul>
+                    <li><a href="/about/">About Us &amp; Standards</a></li>
+                    <li><a href="/contact/">Contact Editorial Team</a></li>
                     <li><a href="/privacy-policy/">Privacy Policy</a></li>
-                    <li><a href="/terms-of-use/">Terms of Use & Disclosure</a></li>
+                    <li><a href="/terms-of-use/">Terms of Use &amp; Disclosure</a></li>
                     <li><a href="/sitemap.xml">XML Sitemap</a></li>
                 </ul>
                 <p style="font-size: 0.75rem; margin-top: 1rem; color: #64748b;">
@@ -1595,9 +1597,69 @@ def build_home_page(all_reviews, all_guides, all_hubs):
 def build_legal_page(item):
     path = item['path']
     is_privacy = "privacy" in path
-    title = "Privacy Policy | BestWatchDeals" if is_privacy else "Terms of Use & Affiliate Disclosure | BestWatchDeals"
+    is_about = "about" in path
+    is_contact = "contact" in path
     
-    if is_privacy:
+    if is_about:
+        title = "About BestWatchDeals | Independent Horology Reviews & Benchmarks Since 2012"
+        content = """
+        <h1>About BestWatchDeals</h1>
+        <div class="post-meta">Independent Horological Benchmarks & Mechanical Deal Analysis • Established 2012</div>
+
+        <p><strong>BestWatchDeals.com</strong> is an independent digital publication, horological testing lab, and consumer price index dedicated to mechanical timepieces, luxury homage watches, and verified collector deals.</p>
+
+        <h2>Our Mission</h2>
+        <p>Since 2012, our mission has been straightforward: to demystify luxury horology and empower collectors to find authentic mechanical value without paying inflated four-figure retail markups. We believe world-class horological engineering—featuring solid 316L marine stainless steel, scratch-resistant sapphire crystals, and reliable automatic movements—should be accessible to every passionate enthusiast.</p>
+
+        <h2>Our 4-Pillar Testing &amp; Benchmarking Protocol</h2>
+        <p>Unlike automated aggregator websites, every watch reviewed or featured on BestWatchDeals undergoes rigorous evaluation based on four fundamental pillars:</p>
+        <ol style="margin-left: 1.5rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            <li><strong>Movement Calibre Accuracy &amp; Beat Rate:</strong> We evaluate escapement stability, beat error, power reserve, and daily variance (+/- seconds per day) across standard calibres including the Seiko NH35A/NH34 GMT, Miyota 8215/9015 series, and Seagull ST1901 column-wheel chronographs.</li>
+            <li><strong>Metallurgy &amp; Case Finishing:</strong> We inspect case bevels, circular lug brushing, mirror flanks, and bracelet tolerances to benchmark finishing quality against Swiss luxury standards.</li>
+            <li><strong>Optical &amp; Bezel Engineering:</strong> We examine synthetic sapphire scratch resistance, anti-reflective (AR) inner coatings, ceramic bezel insert engravings, and luminescence brightness (Swiss Super-LumiNova BGW9 / C3).</li>
+            <li><strong>Water Resistance &amp; Pressure Integrity:</strong> We verify crown screw-down mechanics, caseback O-rings, and rated depth atmospheres for diving and sporting utility.</li>
+        </ol>
+
+        <h2>Editorial Board &amp; Independence</h2>
+        <p>Our editorial team comprises passionate horologists, microbrand collectors, and precision mechanics. We maintain strict editorial independence: we do not accept paid compensation in exchange for positive reviews or altered technical verdicts. Every watch is assessed on its objective specifications and real-world wrist experience.</p>
+
+        <h2>Affiliate Transparency</h2>
+        <p>BestWatchDeals.com is reader-supported. When you purchase through our links to AliExpress or Amazon, we may earn an affiliate commission at zero extra cost to you. As an Amazon Associate I earn from qualifying purchases. This support directly funds our hands-on testing, server infrastructure, and daily deal auditing.</p>
+        """
+    elif is_contact:
+        title = "Contact Our Editorial Board & Support | BestWatchDeals"
+        content = """
+        <h1>Contact Our Editorial Board</h1>
+        <div class="post-meta">Editorial Headquarters, Reader Support &amp; Advertising Inquiries</div>
+
+        <p>We welcome questions from horology collectors, readers, press organizations, and verified watch distributors. Whether you have an inquiry regarding a specific watch review, wish to report a price discrepancy, or want to discuss commercial partnerships, please reach out via our dedicated channels below.</p>
+
+        <h2>Direct Communication Channels</h2>
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; margin-bottom:1.5rem; line-height:1.7;">
+            <p style="margin-bottom:1rem;"><strong>✍️ Editorial &amp; Content Inquiries:</strong><br>
+            For technical feedback, horology corrections, or review suggestions:<br>
+            <a href="mailto:editorial@bestwatchdeals.com" style="color:var(--deal-orange); font-weight:700;">editorial@bestwatchdeals.com</a></p>
+
+            <p style="margin-bottom:1rem;"><strong>📢 Press, Advertising &amp; Partnerships:</strong><br>
+            For media inquiries, brand sponsorship, and Ezoic/ad network correspondence:<br>
+            <a href="mailto:partners@bestwatchdeals.com" style="color:var(--deal-orange); font-weight:700;">partners@bestwatchdeals.com</a></p>
+
+            <p style="margin-bottom:0;"><strong>🛡️ Privacy &amp; Compliance Officer:</strong><br>
+            For GDPR, CCPA, or data privacy requests:<br>
+            <a href="mailto:compliance@bestwatchdeals.com" style="color:var(--deal-orange); font-weight:700;">compliance@bestwatchdeals.com</a></p>
+        </div>
+
+        <h2>Editorial Turnaround Commitment</h2>
+        <p>Our team reviews all incoming correspondence daily. We aim to respond to all reader questions, technical corrections, and business inquiries within <strong>24 to 48 business hours</strong>.</p>
+
+        <h2>Publisher Details</h2>
+        <p><strong>BestWatchDeals.com</strong><br>
+        An Independent Horology Publication &amp; Price Index<br>
+        Global Operations: United States &amp; International Digital Distribution<br>
+        Official Website: <a href="https://bestwatchdeals.com">https://bestwatchdeals.com</a></p>
+        """
+    elif is_privacy:
+        title = "Privacy Policy | BestWatchDeals"
         content = """
         <h1>Privacy Policy</h1>
         <div class="post-meta">Effective Date: October 2026 • BestWatchDeals.com Compliance Team</div>
@@ -1607,32 +1669,33 @@ def build_legal_page(item):
         <p>Like standard web publishers hosted on global content delivery networks, BestWatchDeals.com collects non-identifiable technical log data. This includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date/time stamps, referring/exit pages, and click counts. We use this data exclusively to administer the site, optimize server response times, and analyze macro readership trends.</p>
 
         <h2>2. Cookies, Web Beacons and Advertising Partners</h2>
-        <p>Our website utilizes standard cookies to improve page loading speed and support affiliate tracking functionality. Third-party advertising vendors (such as Google AdSense) and affiliate platforms (including AliExpress Portals and Amazon Associates) may deploy cookies or web beacons when you click an external merchant link to attribute referral commissions.</p>
+        <p>Our website utilizes standard cookies to improve page loading speed and support affiliate tracking functionality. Third-party advertising vendors (such as Google AdSense and Ezoic) and affiliate platforms (including AliExpress Portals and Amazon Associates) may deploy cookies or web beacons when you click an external merchant link to attribute referral commissions.</p>
         <p>You can choose to disable or selectively turn off our cookies or third-party cookies in your individual browser settings at any time. Disabling cookies will not affect your ability to read our reviews or guides.</p>
 
         <h2>3. Third-Party Websites and External Links</h2>
         <p>BestWatchDeals.com contains outbound hyperlinks to external e-commerce platforms and horology stores. Please be aware that once you leave our domain, we do not have control over other websites. We encourage readers to review the individual privacy policies of any merchant website they visit.</p>
 
-        <h2>4. Data Retention & Contact Rights</h2>
-        <p>We do not collect or store unencrypted financial information or payment card numbers. Any inquiries regarding privacy requests or data clarification may be directed to our editorial board at: <strong>editorial@bestwatchdeals.com</strong>.</p>
+        <h2>4. Data Retention &amp; Contact Rights</h2>
+        <p>We do not collect or store unencrypted financial information or payment card numbers. Any inquiries regarding privacy requests or data clarification may be directed to our editorial board at: <strong>compliance@bestwatchdeals.com</strong>.</p>
         """
     else:
+        title = "Terms of Use & Affiliate Disclosure | BestWatchDeals"
         content = """
-        <h1>Terms of Use & Affiliate Disclosure</h1>
+        <h1>Terms of Use &amp; Affiliate Disclosure</h1>
         <div class="post-meta">Effective Date: October 2026 • BestWatchDeals.com Editorial Standards</div>
         
-        <h2>1. FTC & Global Affiliate Relationship Disclosure</h2>
+        <h2>1. FTC &amp; Global Affiliate Relationship Disclosure</h2>
         <p>In accordance with the Federal Trade Commission (FTC) guidelines and international advertising transparency standards, please assume that hyperlinks leading to retail platforms on BestWatchDeals.com are affiliate links. BestWatchDeals.com participates in affiliate advertising programs—including AliExpress Portals, Admitad, and the Amazon Services LLC Associates Program—designed to provide a means for independent publishers to earn advertising fees by linking to commercial merchants.</p>
         <p><strong>Amazon Associates Program Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases.</p>
         <p><strong>What this means for you:</strong> If you click an affiliate link on our site and make a purchase, we may receive a small referral commission directly from the retailer. <strong>This occurs at zero extra cost to you.</strong> The price you pay remains identical whether you utilize our links or navigate directly to the merchant.</p>
         
-        <h2>2. Editorial Independence & Unbiased Verdicts</h2>
+        <h2>2. Editorial Independence &amp; Unbiased Verdicts</h2>
         <p>Our editorial integrity is not for sale. We do not accept paid compensation in exchange for positive reviews or altered technical ratings. Every watch evaluated on this website is assessed strictly on its horological merits: movement accuracy, finishing tolerances, crystal scratch resistance, water-resistance integrity, and value relative to retail price.</p>
         
         <h2>3. Price Accuracy and Product Availability Disclaimer</h2>
         <p>Horological market pricing, distributor coupons, AliExpress Choice Day promotions, and inventory levels fluctuate rapidly. While our editorial team audits deal pricing on a continuous basis, we cannot guarantee that a listed price will remain available at the exact moment of your purchase. Always verify final pricing, shipping costs, and return policies directly on the merchant's checkout page before completing an order.</p>
 
-        <h2>4. Intellectual Property & Brand Trademarks</h2>
+        <h2>4. Intellectual Property &amp; Brand Trademarks</h2>
         <p>All brand names, trademarks, and registered logos (such as Rolex, Omega, Seiko, Breitling, Citizen, Bulova, etc.) referenced on this website are the property of their respective trademark owners. Their reference on BestWatchDeals.com is made solely under nominative fair use for descriptive, comparative, and editorial review purposes.</p>
         """
 
@@ -1640,7 +1703,7 @@ def build_legal_page(item):
     <div class="breadcrumbs">
         <a href="/">Home</a>
         <span>/</span>
-        <span>Legal</span>
+        <span>{'About' if is_about else ('Contact' if is_contact else 'Legal')}</span>
     </div>
     <div class="card content-body">
         {content}
@@ -1649,7 +1712,7 @@ def build_legal_page(item):
 
     return render_layout(
         title=title,
-        description=f"Official legal terms, privacy policies, and affiliate disclosures for BestWatchDeals.com.",
+        description=f"Official editorial, contact, privacy, and affiliate disclosure policies for BestWatchDeals.com.",
         canonical_url=item['url'],
         body_html=body
     )
