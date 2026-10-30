@@ -1035,6 +1035,7 @@ def main():
         '/robots.txt', '/robots.txt/', '/sitemap.xml', '/sitemap.xml/',
         '/llms.txt', '/llms.txt/', '/llms-full.txt', '/llms-full.txt/',
         '/feed.xml', '/pinterest-feed.xml', '/rss.xml',
+        '/google-feed.xml', '/google-feed.xml/', '/google-shopping-feed.xml', '/google-shopping-feed.xml/',
         '/ads.txt', '/ads.txt/',
         '/about/', '/about', '/contact/', '/contact',
         '/privacy-policy/', '/privacy-policy', '/terms-of-use/', '/terms-of-use',
@@ -1075,6 +1076,13 @@ def main():
     # 9. Generate llms.txt, llms-full.txt, and AI-optimized robots.txt
     from generate_llms_txt import generate_llms_files
     generate_llms_files()
+
+    # 10. Generate Google Shopping XML Feed & Pinterest Feeds
+    from build_google_shopping_feed import generate_google_shopping_feed
+    generate_google_shopping_feed()
+
+    from build_pinterest_rss import generate_pinterest_rss
+    generate_pinterest_rss()
 
     print("🎉 Full Megastore Rebuild Succeeded!")
 
